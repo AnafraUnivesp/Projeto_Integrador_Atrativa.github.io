@@ -18,7 +18,7 @@
 
 * [Instalando e Configurando a Jenkill:](https://jekyllrb.com/docs/installation/windows/)
 
-*[Webpage:](https://anafraunivesp.github.io/website01.github.io/)
+*[Minha Webpage:](https://anafraunivesp.github.io/website01.github.io/)
 
 * [Exemplo de webtemplate do Jenkill:](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html)
 
@@ -71,6 +71,11 @@ O jenkill está sendo executado no gitbash
 Fiz algumas anotações e prints no meu whatsapp
 
 Não deu certo o utilizar o : **http://localhost:4000/** como indicado pelo github e a sim o que é gerado no jekyll
+
+
+<img src="pelecomemoracao.gif" alt="Minha primeira Imagem"> 
+
+
 
 
 
