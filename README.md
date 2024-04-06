@@ -18,7 +18,7 @@
 
 * [Instalando e Configurando a Jenkill:](https://jekyllrb.com/docs/installation/windows/)
 
-*[Minha Webpage:](https://anafraunivesp.github.io/website01.github.io/)
+* [Minha Webpage:](https://anafraunivesp.github.io/website01.github.io/)
 
 * [Exemplo de webtemplate do Jenkill:](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html)
 
