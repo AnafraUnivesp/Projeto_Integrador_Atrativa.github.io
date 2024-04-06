@@ -1,6 +1,6 @@
 # website01..github.io
 
-<h1>Anotações</h>
+<h1>Anotações</h1>
 
 **Essas Anotações serão convertidas em documentações futuramente**
 
@@ -26,6 +26,8 @@
 
 * [Configurando Fonte de Publicicação (Ativando o Github Actions:)](https://docs.github.com/pt/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
+<br>
+<br>
 
 <h2>Para rodar localmente</h2>
 
@@ -51,6 +53,8 @@ https://rubyinstaller.org/downloads/)
 
 * [Personalizando o tema HTML:](https://docs.github.com/pt/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#customizing-your-themes-html-layout)
 
+<br>
+<br>
 
 <h2>Lembretes e observações</h2>
 
@@ -68,7 +72,7 @@ Fiz algumas anotações e prints no meu whatsapp
 
 Não deu certo o utilizar o : **http://localhost:4000/** como indicado pelo github e a sim o que é gerado no jekyll
 
-.
+
 
 
 
