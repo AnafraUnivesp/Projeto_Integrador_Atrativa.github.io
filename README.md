@@ -2,6 +2,10 @@
 
 > Repositório desenvovldo sem template e com o a pasta docs como fonte de publicação e demais configurações do Jenkyll.
 
+<div id ="voltarFinal">
+	<a href="https://github.com/AnafraUnivesp/website01.github.io/tree/dev?tab=readme-ov-file#lembretes-e-observa%C3%A7%C3%B5es" id="descer">:arrow_down_small: Topo da página</a>
+</div>
+
 <h1>Anotações</h1>
 
 **Essas Anotações serão convertidas em documentações futuramente**
@@ -85,9 +89,9 @@ Não deu certo o utilizar o : **http://localhost:4000/** como indicado pelo gith
 
 <!-- Div retorno ao topo da página -->
 
-:arrow_up: 
+
 <div id ="voltarTopo">
-	<a href="https://github.com/AnafraUnivesp/website01.github.io/tree/dev?tab=readme-ov-file#website01githubio" id="subir">:arrow_up: Topo da página</a>
+	<a href="https://github.com/AnafraUnivesp/website01.github.io/tree/dev?tab=readme-ov-file#website01githubio" id="subir">:arrow_up_small: Topo da página</a>
 </div>
 
 
