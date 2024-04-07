@@ -72,15 +72,22 @@ O jenkill está sendo executado no gitbash
 
 Fiz algumas anotações e prints no meu whatsapp
 
-Não deu certo o utilizar o : **http://localhost:4000/** como indicado pelo github e a sim o que é gerado no jekyll
+Não deu certo o utilizar o : **http://localhost:4000/** como indicado pelo github e a sim o que é gerado no jekyll.
 
+<br>
+
+<!-- Div de Alinhamento de Imagem -->
+<div align="center">
 
 ![Deu bom!!](./docs/pelecomemoracao.gif)
 
+</div>
 
+<!-- Div retorno ao topo da página -->
 
-<div id="voltarTopo">
-	<a href center="https://github.com/AnafraUnivesp/website01.github.io/tree/dev?tab=readme-ov-file#website01githubio" id="subir">Topo</a>
+:arrow_up: 
+<div id ="voltarTopo">
+	<a href="https://github.com/AnafraUnivesp/website01.github.io/tree/dev?tab=readme-ov-file#website01githubio" id="subir">:arrow_up: Topo da página</a>
 </div>
 
 
