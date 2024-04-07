@@ -1,10 +1,12 @@
 # website01..github.io
 
+> Repositório desenvovldo sem template e com o a pasta docs como fonte de publicação e demais configurações do Jenkyll.
+
 <h1>Anotações</h1>
 
 **Essas Anotações serão convertidas em documentações futuramente**
 
-* [Criando um repositorio do zero:](https://docs.github.com/pt/repositories/creating-and-managing-repositories/creating-a-new-repository)
+* [Criando um repositório do zero:](https://docs.github.com/pt/repositories/creating-and-managing-repositories/creating-a-new-repository)
 
 * [Criando um repositório + Website:](https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site)
  
@@ -14,7 +16,7 @@
 
 * [Inserindo Https:](https://docs.github.com/pt/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https)
 
-* [Utiliando Jekyll Localmente:](https://docs.github.com/pt/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
+* [Utilizando Jekyll Localmente:](https://docs.github.com/pt/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
 
 * [Instalando e Configurando a Jenkill:](https://jekyllrb.com/docs/installation/windows/)
 
@@ -73,11 +75,13 @@ Fiz algumas anotações e prints no meu whatsapp
 Não deu certo o utilizar o : **http://localhost:4000/** como indicado pelo github e a sim o que é gerado no jekyll
 
 
-<img src="pelecomemoracao.gif" alt="Minha primeira Imagem"> 
+![Deu bom!!](./docs/pelecomemoracao.gif)
 
 
 
-
+<div id="voltarTopo">
+	<a href="#" id="subir">Topo</a>
+</div>
 
 
 
