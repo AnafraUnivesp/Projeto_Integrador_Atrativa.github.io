@@ -16,101 +16,41 @@
 </head>
 <body>
     <div class="main">
-        <div class="container">
-            <div id="logotipo">
+      <!-- HEADER -->  
+      <div class="headerMain">
+        <div class="header1">
+          <div>Header1a</div>
+          <div>Header1b</div>
+        </div>
+        <div class="header2">
+          <div id="logotipo">
             <img src="/docs/documents/img/logotipo.png" alt="logotipo" srcset="">
-            </div>
-            <div class="tabs">
+          </div>
+          <!-- Abas clicáveis-->
+          <div class="tabsMain">
             <div class="tab" data-tab="tab1">Entradas</div>
-            <div class="tab" data-tab="tab2">Saídas</div>
-            <div class="tab" data-tab="tab3">Estoque</div>
-            <div class="tab" data-tab="tab4">Sobre</div>
-            </div>
+            <div class="tab" data-tab="tab2">Estoque</div>
+            <div class="tab" data-tab="tab3">Sobre</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CONTEÚDO PRINCIPAL DA ABA 1, ENTRADAS -->
+      <div id="tab1" class="tab-content active">
+        <!-- Tab1 -->
+        <div id="containerTabela">
+          <div id="inCodigo">
+            <label for="inputCodigo">Código</label>
+            <input type="text" id="inputCodigo" maxlength="5" onkeyup="mascara2(this)" placeholder="Codigo">
+          </div>
+
+          <div id="inLote">
+            <label for="inputLote">Lote</label>
+            <input type="text" id="inputLote" maxlength="5" onkeyup="mascara2(this)" placeholder="Lote">
+          </div>
         </div>
 
-        <div id="tab1" class="tab-content active">
-            <!-- Tabela -->
-            <div id="containerTabela">
-                <table id="inTabela">
-                    <tr>
-                        <th class="confCodigo">Código</th>
-                        <th class="confDescricao">Descrição</th>
-                        <th class="confCor">Cor</th>
-                        <th class="confTamanho">Tamanho</th>
-                        <th class="confQuantidade">Quant.</th>
-                        <th class="confPrecoUnid">Val. unid.</th>
-                        <th class="confPrecoTotal">Total</th>
-                    </tr>
-                    <tr>
-                        <td class="confCodigo">
-                            <input type="text" id="inCodigo" name="codigo" maxlength="5" placeholder="Código">
-                        </td>
-                        <td class="confDescricao">
-                            <input type="text" id="inDescricao" name="codigo" maxlength="50" placeholder="Descrição">
-                        </td>
-                        <td class="confCor">
-                            <label for="cor"></label>
-                            <select id="inCor" name="cor">
-                                <option value="" selected>Selecione</option>
-                                <option value="outro">outro</option>
-                                <option value="amarelo">amarelo</option>
-                                <option value="azul">azul</option>>
-                                <option value="branco">branco</option>
-                                <option value="cinza">cinza</option>
-                                <option value="dourado">dourado</option>
-                                <option value="laranja">laranja</option>
-                                <option value="marrom">marrom</option>
-                                <option value="prata">prata</option>
-                                <option value="preto">preto</option>
-                                <option value="roxo">roxo</option>
-                                <option value="transparente">transparente</option>
-                                <option value="verde">verde</option>
-                                <option value="vermelho">vermelho</option>
-                            </select>
-                        </td>
-                        <td class="confTamanho">
-                            <label for="inTamanho"></label>
-                            <select id="inTamanho" name="tamanho">
-                            <option value="" selected>Selecione</option>
-                            <option value="P">PP</option>
-                            <option value="P">P</option>
-                            <option value="M">M</option>
-                            <option value="G">G</option>
-                            <option value="GG">GG</option>
-                            <option value="P">XG</option>
-                            </select>
-                        </td>
-                        <td class="confQuantidade">
-                            <label for="quantidade"></label>
-                            <input type="text" id="inQuantidade" name="quantidade" maxlength="2">
-                        </td>
-                        <td class="confPrecoUnid">
-                            <label for="precoUnit"></label>
-                            <input type="text" id="inPrecoUnit" name="precoUnit" maxlength="7">
-                        </td>
-                        <td class="confPrecoTotal">
-                            <label for="precoTotal"></label>
-                            <input type="text" id="inPrecoTotal" name="precoTotal" maxlength="7">
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            
-
-            <!-- 
-            <div id="procurarInserir">
-                <div id="btInserir">
-                    <button class="botao-inserir">Inserir</button>
-                </div>
-                <div id="procurar">
-                    <form action="/caminho_para_pesquisa" method="get">
-                        <button type="submit">Procurar</button>
-                        <input type="text" id="search-field" name="query">
-                    </form>
-                </div>
-
-            </div> -->
-        </div>
+      </div>
             
         <div id="tab2" class="tab-content">
             Conteúdo da Aba 2222222222
@@ -119,10 +59,7 @@
         <div id="tab3" class="tab-content">
             Conteúdo da Aba 3333333333
         </div>
-        <div id="tab4" class="tab-content">
-            Conteúdo da Aba sobre
-        </div>
-    </div>
+  </div>
     <script src="javaScript.js"></script>
 </body>
 </html>

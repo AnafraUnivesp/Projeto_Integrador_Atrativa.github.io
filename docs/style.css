@@ -1,95 +1,77 @@
-/* Estilo para as abas */
+/*A propriedade "box-sizing" definida como "border-box", garante que o preenchimento
+e a borda estejam incluídos na largura e altura total dos elementos*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
-.main{
+/* Configurações para que sejam exibidas somente as informações da aba ativa. */
+.tab-content {
+  display: none; /* Esconde todos os conteúdos das abas */
+}
 
-    width: 1000px;
+.tab-content.active {
+  display: block; /* Mostra o conteúdo da aba ativa */
+}
+
+
+/* Configuração para dispositivos extra pequenos (tela de tamanho entre 200px e 600px). */
+@media screen and (min-width: 200px) and (max-width: 600px){
+  .main{
+    width: 98%;
     margin: auto;
-    padding: 10px;
-    background-color: #f2f2f2;
-
-    box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.493);
-    border-radius: 3px;
-}
-
-.container {
+  }
+  /* CONFIGURAÇÕES DO CABEÇALHO */
+  .header1{
+    width: 100%;
     display: grid;
-    grid-template-columns: auto 1fr; /* Primeira coluna com largura automática (para o logotipo) e segunda coluna com largura fracionada (para as abas) */
-    align-items: center; /* Centraliza verticalmente */
-}
-  .tabs {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    border-bottom: 2px solid #ddd;
+    grid-template-columns: 1fr 1fr;
+    height: 40px;
+    background-color: lightblue;
   }
-    
+  .header2{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+  #logotipo, #logotipo img{
+    width: 100%;
+    height: 50px;
+  }
+  .tabsMain{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .tab {
-    padding: 10px 20px;
-    margin: 0px 2px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Transição suave para a mudança de cor de fundo */
-  }
-    
-  .tab:hover {
-    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
-  }
-    
-  .tab.active {
-    background-color: #fff;
-    border-bottom: 2px solid #fff;
-  }
-    
-  /* Estilo para o conteúdo das abas */
-  .tab-content {
-    display: none;
-    margin: 20px;
-  }
-    
-  .tab-content.active {
     display: flex;
-    flex-wrap: wrap; /* Permite que os elementos filhos sejam colocados em várias linhas se necessário */
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
+    height: 50px; /* Ajuste conforme necessário */
+    border: 1px solid #ddd; /* Estilo da borda */
+    background-color: #f0f0f0; /* Cor de fundo */
   }
-  .tab-content.active > div {
-    margin: 2px 5px 10px 5px;
-    /*
-    flex: 1; Faz com que as divs filhas ocupem o espaço disponível horizontalmente
-    margin-right: 5px; Adiciona um espaço entre as divs filhas */
+
+  /* CONFIGURAÇÕES DE CONTEÚDO PRINCIPAL */
+  #tab1{
+    width: 98%;
+    margin: auto;
+  }
+  #containerTabela {
+    margin: 10px 0px;
+    padding: 2px;
+    display: grid;
+    grid-template-columns: 48% 48%; /* Duas colunas com 45% de largura cada */
+    gap: 2%; /* Espaçamento entre as colunas */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
   }
   
-  /* Minhas configurações */
-#logotipo img {
-  height: 50px;
+  #inCodigo input,
+  #inLote input {
+    width: 98%; /* Define a largura do input */
+    max-width: 100%; /* Garante que o input não ultrapasse a largura da div pai */
+  }  
+  
 }
-
-/* ### Configuração da tabela ###*/
-/* Estilo da tabela */
-table {
-  /* border-collapse: collapse; Remove espaçamento entre as células */
-  width: 100%; /* Define a largura da tabela */
-
-}
-
-/* Estilo das células do cabeçalho */
-th {
-    background-color: #f2f2f2; /* Cor de fundo do cabeçalho */
-    padding: 0px 2px; /* Espaçamento interno das células */
-    margin: 0px; /* Espaçamento interno das células */
-    text-align: left; /* Alinhamento do texto à esquerda */
-}
-      
-/* Estilo das células de dados */
-td {
-  padding: 0px 2px; /* Espaçamento interno das células */
-  margin: 0px; /* Espaçamento interno das células */
-  text-align: left; /* Alinhamento do texto à esquerda */
-}
-
-/* Largura das colunas da tabela */
-#inCodigo{width: 60px;}
-#inDescricao{width: 300px;}
-#inCor{width: 85px;}
-#inTamanho{width: 85px;}
-#inQuantidade{width: 50px;}
-#inPrecoUnit{width: 70px;}
-#inPrecoTotal{width: 70px;}
