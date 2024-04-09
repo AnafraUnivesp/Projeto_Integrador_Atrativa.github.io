@@ -30,6 +30,7 @@ e a borda estejam incluídos na largura e altura total dos elementos*/
     grid-template-columns: 1fr 1fr;
     height: 40px;
     background-color: lightblue;
+
   }
   .header2{
     width: 100%;
@@ -57,21 +58,83 @@ e a borda estejam incluídos na largura e altura total dos elementos*/
   #tab1{
     width: 98%;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-  #containerTabela {
-    margin: 10px 0px;
-    padding: 2px;
+  #container1, #container4{
+    width: 100%;
+    margin: auto;
+    padding: 3px;
     display: grid;
-    grid-template-columns: 48% 48%; /* Duas colunas com 45% de largura cada */
-    gap: 2%; /* Espaçamento entre as colunas */
+    grid-template-columns: 1fr 1fr; /* Duas colunas com 48% de largura cada */
+    gap: 4px;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
+    border: 1px solid #ddd; /* Estilo da borda */
+    background-color: #f0f0f0; /* Cor de fundo */
+
+  }
+  #container2 {
+    margin: auto;
+    padding: 3px;
+    display: grid;
+    grid-template-columns: 1fr; /* Duas colunas com 48% de largura cada */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border: 1px solid #ddd; /* Estilo da borda */
+    background-color: #f0f0f0; /* Cor de fundo */
+  }
+  #container3{
+    width: 100%;
+    margin: auto;
+    padding: 3px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas com 48% de largura cada */
+    gap: 4px;
+    border-radius: 0px 0px 4px 4px;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border: 1px solid #ddd; /* Estilo da borda */
+    background-color: #f0f0f0; /* Cor de fundo */
+  }
+
+  #container5{
+    width: 100%;
+    margin: auto;
+    padding: 3px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas com 48% de largura cada */
+    gap: 4px;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border: 1px solid #ddd; /* Estilo da borda */
+    background-color: #f0f0f0; /* Cor de fundo */
+
   }
   
   #inCodigo input,
-  #inLote input {
-    width: 98%; /* Define a largura do input */
+  #inLote input,
+  #inQuantidade input,
+  #inValor input{
+    margin: 1px auto;
+    width: 100%; /* Define a largura do input */
     max-width: 100%; /* Garante que o input não ultrapasse a largura da div pai */
-  }  
-  
+  }
+
+
+
+  #inDescricao input{
+    margin: 1px auto;
+    width: 100%; /* Define a largura do input */
+    max-width: 100%; /* Garante que o input não ultrapasse a largura da div pai */
+
+  }
+  .confCor label,
+  .confCor select,
+  .confTamanho label,
+  .confTamanho select {
+      display: block;
+      width: 100%;
+  }
+
 }

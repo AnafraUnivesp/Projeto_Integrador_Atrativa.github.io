@@ -38,15 +38,90 @@
       <!-- CONTEÚDO PRINCIPAL DA ABA 1, ENTRADAS -->
       <div id="tab1" class="tab-content active">
         <!-- Tab1 -->
-        <div id="containerTabela">
-          <div id="inCodigo">
+        <div id="container1">
+          <div id="inCodigo"> <!-- Código -->
             <label for="inputCodigo">Código</label>
             <input type="text" id="inputCodigo" maxlength="5" onkeyup="mascara2(this)" placeholder="Codigo">
           </div>
 
-          <div id="inLote">
+          <div id="inLote"> <!-- Lote -->
             <label for="inputLote">Lote</label>
             <input type="text" id="inputLote" maxlength="5" onkeyup="mascara2(this)" placeholder="Lote">
+          </div>
+        </div>
+
+        <div id="container2"> <!-- Descrição -->
+          <label for="inputDescricao">Descrição</label>
+          <input type="text" id="inputDescricao" maxlength="50" onkeyup="mascara2(this)" placeholder="Descrição">
+        </div>
+
+        <div id="container3">
+          <div class="confCor">
+            <label for="inCor">Cor</label>
+            <select id="inCor" name="cor">
+                <option value="" selected>Selecione</option>
+                <option value="outro">outro</option>
+                <option value="amarelo">amarelo</option>
+                <option value="azul">azul</option>
+                <option value="branco">branco</option>
+                <option value="cinza">cinza</option>
+                <option value="dourado">dourado</option>
+                <option value="laranja">laranja</option>
+                <option value="marrom">marrom</option>
+                <option value="prata">prata</option>
+                <option value="preto">preto</option>
+                <option value="roxo">roxo</option>
+                <option value="transparente">transparente</option>
+                <option value="verde">verde</option>
+                <option value="vermelho">vermelho</option>
+            </select>
+          </div>        
+          <div class="confTamanho"> <!-- Tamanho -->
+            <label for="inTamanho">Tamanho</label>
+            <select id="inTamanho" name="tamanho">
+              <option value="" selected>Selecione</option>
+              <option value="P">PP</option>
+              <option value="P">P</option>
+              <option value="M">M</option>
+              <option value="G">G</option>
+              <option value="GG">GG</option>
+              <option value="P">XG</option>
+            </select>
+          </div>
+        </div>
+        
+        <div id="container4">
+          <div id="inQuantidade"> <!-- Quantidade -->
+            <label for="inputQuantidade">Quantidade</label>
+            <input type="text" id="inpuQuantidade" maxlength="5" onkeyup="mascara2(this)" placeholder="Quantidade">
+          </div>
+
+          <div id="inValor"> <!-- Preço -->
+            <label for="inputValor">Valor</label>
+            <input type="text" id="inputValor" maxlength="5" onkeyup="mascara2(this)" placeholder="Valor">
+          </div>
+        </div>
+
+        <div id="container5">
+          <div class="confCategoria"> <!-- Categoria -->
+            <label for="inCategoria">Categoria</label>
+            <select id="inCategoria" name="categoria">
+                <option value="" selected>Selecione</option>
+                <option value="outro">outro</option>
+                <option value="camisetas">Camisetas</option>
+                <option value="calcas">Calças</option>
+                <option value="bermudas">Bermudas</option>
+                <option value="vestidos">Vestidos</option>
+                <option value="saias">Saias</option>
+                <option value="calcados">Calçados</option>
+                <option value="acessorios">Acessórios</option>
+                <option value="roupaIntima">Roupa Íntima</option>
+            </select>
+          </div>
+          
+          <div id="inDataEnt"> <!-- Data de entrada -->
+            <label for="inputDataEnt">Data Ent.</label>
+            <input type="date" id="inputDataEnt" name="data"  onkeyup="mascara2(this)" placeholder="Data">
           </div>
         </div>
 
