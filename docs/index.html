@@ -13,14 +13,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Integrador</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <div class="main">
       <!-- HEADER -->  
       <div class="headerMain">
         <div class="header1">
-          <div>Header1a</div>
-          <div>Header1b</div>
+          <div></div>
+          <div class="icones">
+            <!-- Ícone do WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=SEUNUMERO" target="_blank">
+              <i class="fab fa-whatsapp icon-black"></i>
+            </a>
+
+            <!-- Ícone do Instagram -->
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fab fa-instagram icon-black"></i>
+            </a>
+            
+
+            <!-- Ícone do Facebook -->
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="fab fa-facebook icon-black"></i>
+            </a>
+
+          </div>
         </div>
         <div class="header2">
           <div id="logotipo">
@@ -122,6 +141,16 @@
           <div id="inDataEnt"> <!-- Data de entrada -->
             <label for="inputDataEnt">Data Ent.</label>
             <input type="date" id="inputDataEnt" name="data"  onkeyup="mascara2(this)" placeholder="Data">
+          </div>
+        </div>
+
+        <!-- Botões -->
+        <div class="buttons">
+          <div class="botaoInserir">
+              <input type="button" class="buttonCalc" value="Inserir" id="btIserir">
+          </div>
+          <div class="botaoLimpar">
+              <input type="button" class="buttonLimpar" value="Limpar" id="btLimpar">
           </div>
         </div>
 

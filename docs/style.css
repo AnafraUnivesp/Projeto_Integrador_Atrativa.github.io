@@ -24,14 +24,35 @@ e a borda estejam incluídos na largura e altura total dos elementos*/
     margin: auto;
   }
   /* CONFIGURAÇÕES DO CABEÇALHO */
+  .headerMain{
+    
+  }
   .header1{
-    width: 100%;
+    padding: 4px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 40px;
-    background-color: lightblue;
-
+    align-items: center; /* Alinha verticalmente */
   }
+  
+  /* Classe para ajustar a cor e tamanho dos ícones */
+  .icon-black {
+    color: black; /* Cor dos ícones */
+    font-size: 27px; /* Tamanho dos ícones */
+  }
+  .icones {
+    display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    gap: 14px; /* Espaçamento entre os ícones */
+    padding: 2px
+  }
+
+  
+  /* Classe para remover underline dos links e aplicar estilos adicionais se necessário */
+  a.no-underline {
+    text-decoration: none; /* Remove o underline */
+    /* Outros estilos podem ser adicionados aqui, como cor do texto, hover effects, etc. */
+  }
+
   .header2{
     width: 100%;
     display: grid;
@@ -137,4 +158,21 @@ e a borda estejam incluídos na largura e altura total dos elementos*/
       width: 100%;
   }
 
+  .buttons {
+    display: flex; /* Configura o contêiner dos botões como flexível */
+    width: 100%;
+    margin: auto;
+    padding: 10px 0px 10px 2px;
+    gap: 10px;
+    justify-content: left; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border: 1px solid #ddd; /* Estilo da borda */
+    background-color: #f0f0f0; /* Cor de fundo */
+  }
+  
+  .botaoInserir input,
+  .botaoLimpar input {
+    padding: 5px;
+  }
+  
 }
