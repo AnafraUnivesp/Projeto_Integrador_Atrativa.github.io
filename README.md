@@ -62,6 +62,13 @@ https://rubyinstaller.org/downloads/)
 <br>
 <br>
 
+<h2>Desenvolvendo o WebServeb</h2>
+
+Em construção: 10.04.2024: [Readme WebServer:](https://github.com/AnafraUnivesp/website01.github.io/blob/main/webserver/Readme.md)
+
+<br>
+<br>
+
 <h2>Lembretes e observações</h2>
 
 Lembrando que precisar habilitar algumas especificações no GEMFILE para rodar localmente
@@ -87,7 +94,7 @@ Não deu certo o utilizar o : **http://localhost:4000/** como indicado pelo gith
 
 </div>
 
-<!-- Div retorno ao topo da página -->
+
 
 
 <div id ="voltarTopo">
