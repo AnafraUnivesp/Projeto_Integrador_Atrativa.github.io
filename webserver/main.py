@@ -1,32 +1,33 @@
-# main.py arquivo principal que irá rodar o script.
-
-# Passo 01: Importando o Flask (Caso gere um erro, instalar via pip install)
-# flask=Biblioteca   Flask=Classe principla quer irá chamar o flask
-
 # Inicialização da Rota
-from flask import Flask, url_for 
+from flask import Flask, url_for, render_template 
 
-app = Flask(__name__) # indentificando e organizando recursos que irão receber o Flask
+app = Flask(__name__) 
 
-# Passo 02 - Faça um teste abrindo o terminal e execute o python main.py 
-
-# Passo 03 - Definir rotas no Flask: sempre 
-# Rotas ( estrutura básica de uma rota)
-
-# @app.route('/') # /= rota principal e também podemos inserir os métodos, porém por padrão só é aceito o método GET
-# def ola_mundo(): # função que recebe a requisição ( string, html, json)
-#    return"Minha primeira estrutura de rota"  # mensagem de retorno da função
-
-
-#Passo 05 - Podemos navegar entre as rotas do site
-# url_for monta funções internas de acordo com a minha rota
+#rota 01
 @app.route("/")
 def ola_atrativa():
-    return f"<a href='{ url_for('pagina_estoque') }'>Gestão de Estoque Atrativa Store </a>" #função chamando a pagina_estoque
+    titulo ="Gestão de Estoque"
+    clote = [
+        {"partnumberl": "L001", "disponivel": False },
+        {"partnumberl": "L002", "disponivel": True },
+        {"partnumberl": "L003", "disponivel": False },
+    ]
 
+    cpeca = [
+        {"partnumberp": "P001", "disponivel": True },
+        {"partnumberp": "P002", "disponivel": False },
+        {"partnumberp": "P003", "disponivel": True },
+    ]
+    
+    tamanho = [    
+        {"partnumberp": "P001", "numeracao": "GG", "disponivel": True },
+        {"partnumberp": "P002", "numeracao": "P", "disponivel": False },
+        {"partnumberp": "P003", "numeracao": "M", "disponivel": True },
+    ]
+    return render_template("index.html", titulo=titulo,clote=clote,cpeca=cpeca,tamanho=tamanho) # variavel de contexto ( html) + variavel de funcao (backend)
 
-# Passo 04: Testando uma segunda rota com mais informações:x'x'
-@app.route("/estoque") #lembra de informar a próxima rota
+#rota 02
+@app.route("/estoque") 
 def pagina_estoque(): 
 
     return """
@@ -35,8 +36,6 @@ def pagina_estoque():
 
 """
 
-# Finalizando a Rota: Sempre deve estar no final do código
-# Responsável por executar o nosso servidor web
-# executando
+# finalizando a execução
 app.run(debug=True) 
 
