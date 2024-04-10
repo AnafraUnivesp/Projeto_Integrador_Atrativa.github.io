@@ -62,7 +62,7 @@ https://rubyinstaller.org/downloads/)
 <br>
 <br>
 
-<h2>Desenvolvendo o WebServeb</h2>
+<h2>Desenvolvendo o WebServer</h2>
 
 Em construção: 10.04.2024: [Readme WebServer:](https://github.com/AnafraUnivesp/website01.github.io/blob/main/webserver/Readme.md)
 
