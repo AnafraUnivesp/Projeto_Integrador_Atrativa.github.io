@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projeto Integrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <h2>{{ titulo }}</h2> <!-- abra duas chaves para adicionar o titulo que está no backend-->
+    <br>
+    
+    <b>Informações sobre o Lote</b>
+
+    {% for clote in clote %}
+        <div>{{ clote.partnumberl }} - {{ clote.disponivel }} </div>
+    {% endfor %}   <!-- fim do loop criado acima -->
+
+    <br>
+    <hr>
+
+    <b>Informações sobre o Peça</b>
+
+    {% for cpeca in cpeca %}
+        <div>{{ cpeca.partnumberp }} - {{ cpeca.disponivel }}</div>
+    {% endfor %}     <!-- fim do loop criado acima -->
+
+    <br>
+    <hr>    
+
+    <b>Informações sobre o Tamanho Peça</b>
+
+    {% for tamanho in tamanho %}
+        <div>{{ tamanho.partnumberp }} - {{ tamanho.numeracao }} - {{ tamanho.disponivel }}</div>
+    {% endfor %}      <!-- fim do loop criado acima -->
+
+    <br>
+    <hr>
+ 
+    <b>Acesse nossa próxima rota</b><br>
+    <a href="{{url_for('pagina_estoque') }}">Acesse a página de estoque</a>
+
+    <br>
+    <hr>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
