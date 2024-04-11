@@ -4,7 +4,7 @@ estoque_route = Blueprint('estoque', __name__)
 
 
 # Rotas de Estoque
-# -/estoque/ (GET) - Listar os item camisa.
+#-/estoque/ (GET) - Listar os item camisa.
 #-/estoque/new (GET) - Renderiza um formulário para registrar um item camisa.
 #-/estoque/ (POST) - Inserir o item camisa no servidor.
 #-/estoque/<id> (GET) - Obter dados do item camisa.
