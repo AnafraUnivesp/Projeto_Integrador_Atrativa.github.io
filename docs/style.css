@@ -25,7 +25,8 @@ e a borda estejam incluídos na largura e altura total dos elementos*/
   }
   /* CONFIGURAÇÕES DO CABEÇALHO */
   .headerMain{
-    
+    width: 98%;
+    margin: auto;
   }
   .header1{
     padding: 4px;
