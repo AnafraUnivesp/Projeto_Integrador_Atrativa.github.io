@@ -1,23 +1,26 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
+from database.estoque import ESTOQUE
 
 estoque_route = Blueprint('estoque', __name__)
 
+"""
+Rotas de Estoque
+-/estoque/ (GET) - Listar os item camisa.
+-/estoque/new (GET) - Renderiza um formulário para registrar um item camisa.
+-/estoque/ (POST) - Inserir o item camisa no servidor.
+-/estoque/<id> (GET) - Obter dados do item camisa.
+-/estoque/<id>/edit (GET) - Renderizar um formulário para editar uma camisa.
+-/estoque/<id>update (PUT) - Atualizar os dados do item camisa. 
+-/estoque/<id>delete (DELETE) - Deleta o registro do item camisa.
 
-# Rotas de Estoque
-#-/estoque/ (GET) - Listar os item camisa.
-#-/estoque/new (GET) - Renderiza um formulário para registrar um item camisa.
-#-/estoque/ (POST) - Inserir o item camisa no servidor.
-#-/estoque/<id> (GET) - Obter dados do item camisa.
-#-/estoque/<id>/edit (GET) - Renderizar um formulário para editar uma camisa.
-#-/estoque/<id>update (PUT) - Atualizar os dados do item camisa. 
-# -/estoque/<id>delete (DELETE) - Deleta o registro do item camisa.
-
+"""
 
 # rota 01 - Listando o item camisa
 @estoque_route.route('/')
 def lista_camisas():      # teremos que listar nossas peças de roupas, então criamos uma função lista
     """ Listar Clientes"""
-    return {'pagina':"Listar Camisas"} # apos configurar o app na main eu retiro o pass e faço um return
+    return render_template('lista_camisas.html', estoque=ESTOQUE)
+
 
 # rota 02 - Inserindo o item camisa
 @estoque_route.route('/', methods=['POST']) # Para criar usuário não tenho id
@@ -29,19 +32,19 @@ def inserir_camisas():
 @estoque_route.route('/new') # Não foi mecionado o get, pois por padrão a rota é GET
 def form_cadas_camisas(): 
     """ Formulário para criar cadastrar um novo item """
-    return {'pagina':"Formulário Camisas"}
+    return render_template('form_cadas_camisas.html')
 
 # rota 04 - Obtendo detalhes
 @estoque_route.route('/<int:camisa_id>') # dinâmico: tipo do parâmetro
 def obter_camisas(camisa_id): 
      """ Exibir detalhes do item  """
-     pass
+     return render_template('obter_camisas.html')
 
 # rota 05 - Editando dados do item
 @estoque_route.route('/<int:camisa_id>/edit') # dinâmico: tipo do parâmetro
 def form_editar_camisas(camisa_id): 
      """ Formulário para editar os dados de um item  """
-     pass
+     return render_template('form_editar_camisas.html')
 
 # rota 06 - Atualizando infos do item
 @estoque_route.route('/<int:camisa_id>/update', methods=['PUT']) # Para criar usuário não tenho id

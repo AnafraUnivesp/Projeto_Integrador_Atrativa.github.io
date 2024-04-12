@@ -1,7 +1,7 @@
 
 from flask import Flask
 from routes.home import home_route # importando a rota e a variável da homeroutes
-from routes.estoque import estoque_route
+from routes.estoque import estoque_route # importando a rota estoque
 
 app = Flask(__name__) 
 
