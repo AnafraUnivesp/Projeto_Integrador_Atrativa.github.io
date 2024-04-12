@@ -1,179 +1,71 @@
-/*A propriedade "box-sizing" definida como "border-box", garante que o preenchimento
-e a borda estejam incluídos na largura e altura total dos elementos*/
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 
-/* Configurações para que sejam exibidas somente as informações da aba ativa. */
-.tab-content {
-  display: none; /* Esconde todos os conteúdos das abas */
-}
-
-.tab-content.active {
-  display: block; /* Mostra o conteúdo da aba ativa */
-}
-
-
-/* Configuração para dispositivos extra pequenos (tela de tamanho entre 200px e 600px). */
-@media screen and (min-width: 200px) and (max-width: 600px){
-  .main{
-    width: 98%;
-    margin: auto;
+@media screen and (min-width: 200px) and (max-width:600px){
+  #main{
+      width: 98%;
+      margin: auto;
   }
-  /* CONFIGURAÇÕES DO CABEÇALHO */
-  .headerMain{
-    width: 98%;
-    margin: auto;
+  /* ### CONFIGURAÇÕES DE CABEÇALHO ### */
+  #header2{
+      display: grid;
+      grid-template-columns: 1fr 5fr;
   }
-  .header1{
-    padding: 4px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center; /* Alinha verticalmente */
+  #logotipo img{
+      height: 50px;
+      width: auto;
+  }
+  #abas{
+      height: 50px;
+      margin-left: 5px;
+  }
+
+  /* ### CONFIGURAÇÕES DAS DIV'S E CAMPOS DE INPUT'S ### */
+  #inputDados{
+      width: 98%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
   }
   
-  /* Classe para ajustar a cor e tamanho dos ícones */
-  .icon-black {
-    color: black; /* Cor dos ícones */
-    font-size: 27px; /* Tamanho dos ícones */
-  }
-  .icones {
-    display: flex;
-    justify-content: flex-end; /* Alinha os ícones à direita */
-    gap: 14px; /* Espaçamento entre os ícones */
-    padding: 2px
-  }
-
-  
-  /* Classe para remover underline dos links e aplicar estilos adicionais se necessário */
-  a.no-underline {
-    text-decoration: none; /* Remove o underline */
-    /* Outros estilos podem ser adicionados aqui, como cor do texto, hover effects, etc. */
-  }
-
-  .header2{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-  }
-  #logotipo, #logotipo img{
-    width: 100%;
-    height: 50px;
-  }
-  .tabsMain{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .tab {
-    display: flex;
-    justify-content: center; /* Alinha horizontalmente ao centro */
-    align-items: center; /* Alinha verticalmente ao centro */
-    height: 50px; /* Ajuste conforme necessário */
-    border: 1px solid #ddd; /* Estilo da borda */
-    background-color: #f0f0f0; /* Cor de fundo */
-  }
-
-  /* CONFIGURAÇÕES DE CONTEÚDO PRINCIPAL */
-  #tab1{
-    width: 98%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  #container1, #container4{
-    width: 100%;
-    margin: auto;
-    padding: 3px;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas com 48% de largura cada */
-    gap: 4px;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    border: 1px solid #ddd; /* Estilo da borda */
-    background-color: #f0f0f0; /* Cor de fundo */
-
-  }
-  #container2 {
-    margin: auto;
-    padding: 3px;
-    display: grid;
-    grid-template-columns: 1fr; /* Duas colunas com 48% de largura cada */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    border: 1px solid #ddd; /* Estilo da borda */
-    background-color: #f0f0f0; /* Cor de fundo */
-  }
-  #container3{
-    width: 100%;
-    margin: auto;
-    padding: 3px;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas com 48% de largura cada */
-    gap: 4px;
-    border-radius: 0px 0px 4px 4px;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    border: 1px solid #ddd; /* Estilo da borda */
-    background-color: #f0f0f0; /* Cor de fundo */
-  }
-
-  #container5{
-    width: 100%;
-    margin: auto;
-    padding: 3px;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas com 48% de largura cada */
-    gap: 4px;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    border: 1px solid #ddd; /* Estilo da borda */
-    background-color: #f0f0f0; /* Cor de fundo */
-
+  #codigo,
+  #lote,
+  #tamanho,
+  #cor,
+  #quantidade,
+  #preco,
+  #categoria,
+  #data {
+      display: flex;
+      flex-direction: column;
+      width: 98%;
+      margin: auto;
+      margin-top: 10px;
   }
   
-  #inCodigo input,
-  #inLote input,
-  #inQuantidade input,
-  #inValor input{
-    margin: 1px auto;
-    width: 100%; /* Define a largura do input */
-    max-width: 100%; /* Garante que o input não ultrapasse a largura da div pai */
+  #codigo label,
+  #codigo input,
+  #lote label,
+  #lote input,
+  #tamanho label,
+  #tamanho input,
+  #cor label,
+  #cor input,
+  #quantidade label,
+  #quantidade input,
+  #preco label,
+  #preco input,
+  #categoria label,
+  #categoria select,
+  #data label,
+  #data input{
+      width: 98%;
+      margin: auto;
   }
 
-
-
-  #inDescricao input{
-    margin: 1px auto;
-    width: 100%; /* Define a largura do input */
-    max-width: 100%; /* Garante que o input não ultrapasse a largura da div pai */
-
-  }
-  .confCor label,
-  .confCor select,
-  .confTamanho label,
-  .confTamanho select {
-      display: block;
-      width: 100%;
-  }
-
-  .buttons {
-    display: flex; /* Configura o contêiner dos botões como flexível */
-    width: 100%;
-    margin: auto;
-    padding: 10px 0px 10px 2px;
-    gap: 10px;
-    justify-content: left; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    border: 1px solid #ddd; /* Estilo da borda */
-    background-color: #f0f0f0; /* Cor de fundo */
-  }
-  
-  .botaoInserir input,
-  .botaoLimpar input {
-    padding: 5px;
+  #botaoInserir{
+      width: 58%;
+      margin: 15px 0px 10px 3px;
+      background-color: #D8D9DE;
+      color: black;
+      border: none;
   }
   
 }
