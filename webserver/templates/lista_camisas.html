@@ -1,0 +1,28 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Camisas</th>
+        <th scope="col">Modelos</th>
+        <th scope="col">Marcas</th>       
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for estoque in estoque %}        
+            <tr>
+                <th scope="row">{{estoque.id}}</th> 
+                <td>{{estoque.Camisas}}</td>
+                <td>{{estoque.Modelo}}</td>
+                <td>{{estoque.Marca}}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-primary">Editar</button>
+                    <button type="button" class="btn btn-outline-danger">Deletar</button>
+                </td>
+            </tr>            
+        {% endfor %}  <!-- fechando o loop-->
+
+
+    </tbody>
+  </table>
