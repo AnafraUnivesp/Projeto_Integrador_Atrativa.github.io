@@ -1,8 +1,8 @@
-<form>
-
+<form class="c-form" action="{{url_for('estoque.inserir_camisas') }}" method="POST">
+ 
     <div class="mb-3">
         <label for="disabledSelect" class="form-label">Camisas</label>
-        <select id="disabledSelect" class="form-select">
+        <select id="disabledSelect" class="form-select" name="Camisas">
           <option>Tipo</option>
           <option>Camisa Feminina</option>
           <option>Camisa Masculina</option>
@@ -11,7 +11,7 @@
  
     <div class="mb-3">
       <label for="disabledSelect" class="form-label">Modelo</label>
-      <select id="disabledSelect" class="form-select">
+      <select id="disabledSelect" class="form-select" name="Modelo"> <!-- Chave = name, valor =  a informação que atribuirmos -->
         <option>Modelo</option>
         <option>Manga Larga</option>
         <option>Manga Curta</option>
@@ -20,7 +20,7 @@
      
     <div class="mb-3">
         <label for="disabledSelect" class="form-label">Marca</label>
-            <select id="disabledSelect" class="form-select">
+            <select id="disabledSelect" class="form-select" name="Marca">
             <option>Marca</option>
             <option>Polo Sport</option>
             <option>Armani</option>
@@ -32,8 +32,21 @@
     </div>
 
     <div class="mb-3">
+      <label for="disabledSelect" class="form-label">Tamanho</label>
+          <select id="disabledSelect" class="form-select" name="Tamanho">
+          <option>Tamanho</option> 
+          <option>PP</option>
+          <option>P</option>
+          <option>M</option>
+          <option>G</option>
+          <option>GG</option>
+          <option>XG</option>                  
+          </select>
+  </div>
+
+    <div class="mb-3">
       <label class="form-label">Detalhes</label>
-      <input type="text" class="form-control" placeholder="Informe detalhes sobre a peça">
+      <input type="text" class="form-control" placeholder="Informe detalhes sobre a peça" name="Detalhes">
     </div>
 
 
