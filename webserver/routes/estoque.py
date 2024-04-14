@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 from database.estoque import ESTOQUE
 
 estoque_route = Blueprint('estoque', __name__)
@@ -26,7 +26,22 @@ def lista_camisas():      # teremos que listar nossas peças de roupas, então c
 @estoque_route.route('/', methods=['POST']) # Para criar usuário não tenho id
 def inserir_camisas():    
     """ Inserir itens no banco de dados """ 
-    pass
+
+    data = request.json
+
+    novo_item_estoque = {
+
+        "id": len(ESTOQUE) + 1,
+        "Camisas": data['Camisas'],
+        "Modelo": data['Modelo'],
+        "Marca": data['Marca'],
+        "Tamanho": data['Tamanho'],            
+        "Detalhes": data['Detalhes'], 
+    }
+    
+    ESTOQUE.append(novo_item_estoque)
+
+    return render_template('novo_item_estoque.html', estoque=novo_item_estoque)
 
 # rota 03 - Inserindo o item camisa
 @estoque_route.route('/new') # Não foi mecionado o get, pois por padrão a rota é GET
