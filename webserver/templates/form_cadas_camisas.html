@@ -1,7 +1,10 @@
-<form class="c-form" action="{{url_for('estoque.inserir_camisas') }}" method="POST">
+<form class="c-form" 
+action="{{url_for('estoque.inserir_camisas') }}"
+  method="POST"
+  c-append="#lista-camisas"> <!-- informo onde quero fazer o append-->
  
     <div class="mb-3">
-        <label for="disabledSelect" class="form-label">Camisas</label>
+        <label id="label-target" for="disabledSelect" class="form-label">Camisas</label>
         <select id="disabledSelect" class="form-select" name="Camisas">
           <option>Tipo</option>
           <option>Camisa Feminina</option>
