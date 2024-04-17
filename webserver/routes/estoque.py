@@ -56,10 +56,16 @@ def obter_camisas(camisa_id):
      return render_template('obter_camisas.html')
 
 # rota 05 - Editando dados do item
+# se existe uma variavel de contexto item é pq estamos editando, senão estamos criando, essa ação altera o fluxo do formulário
 @estoque_route.route('/<int:camisa_id>/edit') # dinâmico: tipo do parâmetro
 def form_editar_camisas(camisa_id): 
-     """ Formulário para editar os dados de um item  """
-     return render_template('form_editar_camisas.html')
+    """ Formulário para editar os dados de um item  """
+    item = None
+    for e in ESTOQUE:
+        if e ['id'] == camisa_id:
+            item = e         
+
+    return render_template('form_editar_salvar_item.html', item=item) # nesta etapa mandando para o form editar e salvar o item
 
 # rota 06 - Atualizando infos do item
 @estoque_route.route('/<int:camisa_id>/update', methods=['PUT']) # Para criar usuário não tenho id
@@ -72,7 +78,7 @@ def atualizar_camisas(camisa_id):
 @estoque_route.route('/<int:camisa_id>/delete', methods=['DELETE']) # Para criar usuário não tenho id
 def deletar_camisas(camisa_id):    
     global ESTOQUE
-    ESTOQUE = [ c for c in ESTOQUE if c['id'] != camisa_id ],
+    ESTOQUE = [ e for e in ESTOQUE if e['id'] != camisa_id ]
     return {'deleted': 'ok'}
 
     
