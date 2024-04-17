@@ -5,11 +5,20 @@
     <td>{{estoque.Marca}}</td>
     <td>{{estoque.Tamanho}}</td>
       <td>
-        <button type="button" class="btn btn-outline-primary">Editar</button>
+
+        <!-- Utilizaremos uma get na rota que reenderiza o formulário, passando o id do item que quero reenderizar com seu respectivo id, onde o target será inserido no container do formulário(pagina index principal, editando e salvando)-->
+        <button type="button" class="btn btn-outline-primary" 
+            c-get="{{ url_for('form_editar_camisas', camisa_id=estoque.id)  }}"
+            c-target="">            
+            Editar
+        </button>  
+
+
+        <!-- neste passo criamos um ip dinâmico através do camisa_id=estoque.id-->
         <button type="button" class="btn btn-outline-danger" 
-        c-delete="{{ url_for('estoque.deletar_camisas', camisa_id=estoque.id) }}"
-        c-remove-closest="tr">
-            Deletar
+            c-delete="{{ url_for('estoque.deletar_camisas', camisa_id=estoque.id) }}"
+            c-remove-closest="tr">
+                Deletar
         </button>
-    </td>
+    </td> 
 </tr>  

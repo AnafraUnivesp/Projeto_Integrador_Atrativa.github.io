@@ -1,8 +1,13 @@
 <form class="c-form" 
-action="{{url_for('estoque.inserir_camisas') }}"
-  method="POST"
-  c-append="#lista-camisas"> <!-- informo onde quero fazer o append-->
- 
+        {% if item %} 
+        action="{{url_for('estoque.atualizar_camisas', camisa_id=estoque.id) }}"
+        {% else item %} 
+        action="{{url_for('estoque.inserir_camisas') }}"
+        {% else item %} 
+
+        method="{% if item %}PUT{% else item %}POST{% endif %}" 
+                c-append="#lista-camisas"> <!-- informo onde quero fazer o append-->
+      
     <div class="mb-3">
         <label id="label-target" for="disabledSelect" class="form-label">Camisas</label>
         <select id="disabledSelect" class="form-select" name="Camisas"> <!-- Precisamos verificar como será o nosso id, se será por item ou geral, se iremos ter itens femininos ou masculinos -->
