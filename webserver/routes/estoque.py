@@ -71,5 +71,8 @@ def atualizar_camisas(camisa_id):
 # rota 07 - Atualizando infos do item
 @estoque_route.route('/<int:camisa_id>/delete', methods=['DELETE']) # Para criar usuário não tenho id
 def deletar_camisas(camisa_id):    
-    """ Deletando informações do item """ 
-    pass
+    global ESTOQUE
+    ESTOQUE = [ c for c in ESTOQUE if c['id'] != camisa_id ],
+    return {'deleted': 'ok'}
+
+    
