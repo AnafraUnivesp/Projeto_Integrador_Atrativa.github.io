@@ -1,11 +1,15 @@
 <tr>
-    <th scope="row">{{estoque.id}}</th> 
+    <th scope="row">{{estoque.id}}</th> <!-- Peguei o estoque id daqui, cuidado ao confundir com o camisa_id-->
     <td>{{estoque.Camisas}}</td>
     <td>{{estoque.Modelo}}</td>
     <td>{{estoque.Marca}}</td>
     <td>{{estoque.Tamanho}}</td>
       <td>
         <button type="button" class="btn btn-outline-primary">Editar</button>
-        <button type="button" class="btn btn-outline-danger">Deletar</button>
+        <button type="button" class="btn btn-outline-danger" 
+        c-delete="{{ url_for('estoque.deletar_camisas', camisa_id=estoque.id) }}"
+        c-remove-closest="tr">
+            Deletar
+        </button>
     </td>
 </tr>  
