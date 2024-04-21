@@ -1,0 +1,33 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">item01</th>  
+        <th scope="col">item02</th> 
+        <th scope="col">item03</th> 
+        <th scope="col">item04</th> 
+        <th scope="col">tipo01</th> 
+        <th scope="col">tipo02</th>     
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        {% for estoque in estoque %}
+            <tr>
+                <th scope="row">{{ estoque.id}}</th>
+                <td>estoque.item01</td>
+                <td>estoque.item02</td>
+                <td>estoque.item03</td>
+                <td>estoque.item04</td>
+                <td>estoque.tipo01</td>
+                <td>estoque.tipo02</td>    
+                <td>
+                    <button type="button" class="btn btn-primary">Editar</button>
+                    <button type="button" class="btn btn-danger">Deletar</button>
+                </td>         
+              </tr>
+        {% endfor %}    
+    
+    </tbody>
+  </table>

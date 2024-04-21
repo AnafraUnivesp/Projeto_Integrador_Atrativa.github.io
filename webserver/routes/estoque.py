@@ -1,84 +1,45 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template
 from database.estoque import ESTOQUE
 
 estoque_route = Blueprint('estoque', __name__)
 
-"""
-Rotas de Estoque
--/estoque/ (GET) - Listar os item camisa.
--/estoque/new (GET) - Renderiza um formulário para registrar um item camisa.
--/estoque/ (POST) - Inserir o item camisa no servidor.
--/estoque/<id> (GET) - Obter dados do item camisa.
--/estoque/<id>/edit (GET) - Renderizar um formulário para editar uma camisa.
--/estoque/<id>update (PUT) - Atualizar os dados do item camisa. 
--/estoque/<id>delete (DELETE) - Deleta o registro do item camisa.
-
-"""
-
-# rota 01 - Listando o item camisa
 @estoque_route.route('/')
-def lista_camisas():      # teremos que listar nossas peças de roupas, então criamos uma função lista
-    """ Listar Clientes"""
-    return render_template('lista_camisas.html', estoque=ESTOQUE)
+def lista_estoque():
+    """ Listar o estoque"""
+    return render_template('lista_estoque.html', estoque=ESTOQUE)
 
 
-# rota 02 - Inserindo o item camisa
-@estoque_route.route('/', methods=['POST']) # Para criar usuário não tenho id
-def inserir_camisas():    
-    """ Inserir itens no banco de dados """ 
-
-    data = request.json
-
-    novo_item_estoque = {
-
-        "id": len(ESTOQUE) + 1,
-        "Camisas": data['Camisas'],
-        "Modelo": data['Modelo'],
-        "Marca": data['Marca'],
-        "Tamanho": data['Tamanho'],            
-        "Detalhes": data['Detalhes'], 
-    }
-    
-    ESTOQUE.append(novo_item_estoque)
-
-    return render_template('novo_item_estoque.html', estoque=novo_item_estoque)
-
-# rota 03 - Inserindo o item camisa
-@estoque_route.route('/new') # Não foi mecionado o get, pois por padrão a rota é GET
-def form_cadas_camisas(): 
-    """ Formulário para criar cadastrar um novo item """
-    return render_template('form_cadas_camisas.html')
-
-# rota 04 - Obtendo detalhes
-@estoque_route.route('/<int:camisa_id>') # dinâmico: tipo do parâmetro
-def obter_camisas(camisa_id): 
-     """ Exibir detalhes do item  """
-     return render_template('obter_camisas.html')
-
-# rota 05 - Editando dados do item
-# se existe uma variavel de contexto item é pq estamos editando, senão estamos criando, essa ação altera o fluxo do formulário
-@estoque_route.route('/<int:camisa_id>/edit') # dinâmico: tipo do parâmetro
-def form_editar_camisas(camisa_id): 
-    """ Formulário para editar os dados de um item  """
-    estoque = None
-    for e in ESTOQUE:
-        if e ['id'] == camisa_id:
-            estoque = e         
-
-    return render_template('form_cadas_camisas.html', estoque=estoque) # nesta etapa mandando para o form editar e salvar o item
-
-# rota 06 - Atualizando infos do item
-@estoque_route.route('/<int:camisa_id>/update', methods=['PUT']) # Para criar usuário não tenho id
-def atualizar_camisas(camisa_id):    
-    """ Atualizar informações do item """ 
+@estoque_route.route('/', methods=['POST'])
+def inserir_estoque():
+    """ Inserir os dados do estoque"""
     pass
 
 
-# rota 07 - Atualizando infos do item
-@estoque_route.route('/<int:camisa_id>/delete', methods=['DELETE']) # Para criar usuário não tenho id
-def deletar_camisas(camisa_id):    
-    global ESTOQUE
-    ESTOQUE = [ e for e in ESTOQUE if e['id'] != camisa_id ]
-    return {'deleted': 'ok'}
+@estoque_route.route('/new')
+def form_estoque():
+    """ Formulário para cadastra um item de estoque"""
+    return render_template('form_estoque.html')
 
-    
+
+@estoque_route.route('/<int:estoque_id>')
+def detalhe_estoque(estoque_id):
+    """ Exibir detalhes do item de estoque"""
+    return render_template('detalhe_estoque.html')
+
+
+@estoque_route.route('/<int:estoque_id>/edit')
+def form_edit_estoque(estoque_id):
+    """ Formulário para editar um item de estoque"""
+    return render_template('form_edit_estoque.html')
+
+
+@estoque_route.route('/<int:estoque_id>/update', methods=['PUT'])
+def atualizar_estoque(estoque_id):
+    """ Atualizar informações do item de estoque"""
+    pass
+
+
+@estoque_route.route('/<int:estoque_id>/delete', methods=['DELETE'])
+def deletar_estoque(estoque_id):
+    """ Deletar item de estoque"""
+    pass
