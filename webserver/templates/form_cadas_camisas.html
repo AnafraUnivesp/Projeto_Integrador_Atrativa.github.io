@@ -1,11 +1,11 @@
 <form class="c-form" 
-        {% if item %} 
+        {% if estoque %} 
         action="{{url_for('estoque.atualizar_camisas', camisa_id=estoque.id) }}"
-        {% else item %} 
+        {% else  %} 
         action="{{url_for('estoque.inserir_camisas') }}"
-        {% else item %} 
+        {% endif  %} 
 
-        method="{% if item %}PUT{% else item %}POST{% endif %}" 
+        method="{% if estoque %}PUT{% else %}POST{% endif %}" 
                 c-append="#lista-camisas"> <!-- informo onde quero fazer o append-->
       
     <div class="mb-3">

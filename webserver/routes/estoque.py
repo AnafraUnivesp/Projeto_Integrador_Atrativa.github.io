@@ -60,12 +60,12 @@ def obter_camisas(camisa_id):
 @estoque_route.route('/<int:camisa_id>/edit') # dinâmico: tipo do parâmetro
 def form_editar_camisas(camisa_id): 
     """ Formulário para editar os dados de um item  """
-    item = None
+    estoque = None
     for e in ESTOQUE:
         if e ['id'] == camisa_id:
-            item = e         
+            estoque = e         
 
-    return render_template('form_editar_salvar_item.html', item=item) # nesta etapa mandando para o form editar e salvar o item
+    return render_template('form_cadas_camisas.html', estoque=estoque) # nesta etapa mandando para o form editar e salvar o item
 
 # rota 06 - Atualizando infos do item
 @estoque_route.route('/<int:camisa_id>/update', methods=['PUT']) # Para criar usuário não tenho id

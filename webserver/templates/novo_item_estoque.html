@@ -4,11 +4,12 @@
     <td>{{estoque.Modelo}}</td>
     <td>{{estoque.Marca}}</td>
     <td>{{estoque.Tamanho}}</td>
+    <td>{{estoque.Detalhes}}</td>
       <td>
 
         <!-- Utilizaremos uma get na rota que reenderiza o formulário, passando o id do item que quero reenderizar com seu respectivo id, onde o target será inserido no container do formulário(pagina index principal, editando e salvando)-->
         <button type="button" class="btn btn-outline-primary" 
-            c-get="{{ url_for('form_editar_camisas', camisa_id=estoque.id)  }}"
+            c-get="{{ url_for('estoque.form_editar_camisas', camisa_id=estoque.id)  }}"
             c-target="">            
             Editar
         </button>  
