@@ -1,0 +1,93 @@
+  <form class="c-form" 
+  {% if camiseta %}
+      action="{{ url_for('camiseta.atualizar_camiseta', camiseta_id=camiseta.id) }}" 
+  {% else %}    
+      action="{{ url_for('camiseta.inserir_camiseta') }}" 
+  {% endif %}
+
+  method="{% if camiseta %}PUT{% else %}POST{% endif %}"
+
+  c-appen="#lista-camiseta">
+
+
+    <div class="mb-3">
+        <label for="disabledSelect" class="form-label">item</label>
+        <select id="disabledSelect" class="form-select" name="item" {% if camiseta %}value="{{camiseta.item}}" {% endif %}>
+        >
+          <option>nome do item</option>
+          <option>camiseta</option>
+          
+        </select>
+    </div>
+
+    <div class="mb-3">
+      <label  for="disabledSelect" class="form-label">tipo</label>
+      <select id="disabledSelect" class="form-select" name="tipo">
+        <option>tipo do item</option>
+        <option>feminino</option>
+        <option>masculino</option>
+        <option>único</option>
+      </select>
+   </div>
+
+    <div class="mb-3">
+        <label for="disabledSelect" class="form-label">modelo</label>
+        <select id="disabledSelect" class="form-select" name="modelo" {% if camiseta %}value="{{camiseta.modelo}}" {% endif %}>
+          <option>modelo do item</option>
+          <option>manga larga</option>
+          <option>manga cumprida</option>
+          <option>regata</option>
+        </select>
+    </div>
+ 
+    <div class="mb-3">
+      <label for="disabledSelect" class="form-label">marca</label>
+      <select id="disabledSelect" class="form-select" name="marca"> 
+        <option>marca do item</option>
+        <option>prada</option>
+        <option>dior</option>
+        <option>channel</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="disabledSelect" class="form-label">cor</label>
+        <select id="disabledSelect" class="form-select" name="cor" {% if camiseta %}value="{{camiseta.cor}}" {% endif %}>
+          <option>cor do item</option>
+          <option>branca</option>
+          <option>preta</option>
+          <option>estampada</option>
+          <option>azul</option>
+          <option>vermelha</option>
+          <option>amarela</option>
+          <option>verde</option>
+          <option>rosa</option>
+          <option>marrom</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="disabledSelect" class="form-label">tamanho</label>
+        <select id="disabledSelect" class="form-select" name="tamanho" {% if camiseta %}value="{{camiseta.tamanho}}" {% endif %}>          <option>tamanho do item</option>
+          <option>pp</option>
+          <option>p</option>
+          <option>m</option>
+          <option>g</option>
+          <option>gg</option>
+          <option>xg</option>
+          <option>g1</option>
+          <option>g2</option>
+          <option>g3</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">detalhe</label>
+        <input type="text" class="form-control" placeholder="Informe detalhes e caracteríticas do item de cadastro" name="detalhe" {% if camiseta %}value="{{camiseta.detalhe}}" {% endif %}>>
+      </div>  
+
+      <br>
+      <button type="submit" class="btn btn-primary">
+        {% if camiseta %}Salvar{% else %}Criar{% endif %}</button>
+
+    </form>

@@ -1,0 +1,41 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">item</th>
+      <th scope="col">modelo</th>
+      <th scope="col">tipo</th>
+      <th scope="col">marca</th>
+      <th scope="col">cor</th>
+      <th scope="col">tamanho</th>
+      <th scope="col">detalhes</th>
+      <th scope="col">ações</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for camisa in camisa %}
+
+    <tr>
+
+      <th scope="row">{{ camisa.id }}</th>
+      <td>{{ camisa.item }}</td>
+      <td>{{ camisa.modelo }}</td>
+      <td>{{ camisa.tipo }}</td>
+      <td>{{ camisa.marca }}</td>
+      <td>{{ camisa.cor }}</td>
+      <td>{{ camisa.tamanho }}</td>
+      <td>{{ camisa.detalhes }}</td>
+      <td>
+        <button type="button" class="btn btn-secondary">Editar</button>
+        <button type="button" class="btn btn-danger">Deletar</button>
+      </td>
+    </tr>
+
+  {% endfor %}
+
+  
+    
+  
+  </tbody>
+</table>
