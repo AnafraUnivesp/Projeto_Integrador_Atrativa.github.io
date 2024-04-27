@@ -1,0 +1,62 @@
+<form class="c-form" 
+{% if camiseta %}
+     action="{{ url_for('camiseta.atualizar_camiseta', camiseta_id=camiseta.id) }}"          
+{% else %}    
+     action="{{ url_for('camiseta.inserir_camiseta') }}" 
+{% endif %}
+
+method="{% if camiseta %}PUT{% else %}POST{% endif %}"
+
+{% if camiseta %}
+    c-swap="#camiseta-{{camiseta.id}} "
+{% else %} 
+    c-appen="#lista-camiseta"
+{% endif %}          
+
+c-reload-container="true" >
+
+<div class="mb-3">
+<label class="form-label">item</label>
+<input type="text" class="form-control" name="item" {% if camiseta %}value="{{camiseta.item}}"{% endif %}>
+</div>
+
+<div class="mb-3">
+<label class="form-label">tipo</label>
+<input type="text" class="form-control" name="tipo" {% if camiseta %}value="{{camiseta.tipo}}" {% endif %}>
+</div>
+
+<div class="mb-3">
+<label class="form-label">modelo</label>
+<input type="text" class="form-control" name="modelo" {% if camiseta %}value="{{camiseta.modelo}}" {% endif %}>
+</div>
+
+
+<div class="mb-3">
+<label class="form-label">marca</label>
+<input type="text" class="form-control" name="marca" {% if camiseta %}value="{{camiseta.marca}}" {% endif %}>
+</div>
+
+
+<div class="mb-3">
+<label class="form-label">cor</label>
+<input type="text" class="form-control" name="cor" {% if camiseta %}value="{{camiseta.cor}}" {% endif %}>
+</div>
+
+
+<div class="mb-3">
+<label class="form-label">tamanho</label>
+<input type="text" class="form-control" name="tamanho" {% if camiseta %}value="{{camiseta.tamanho}}" {% endif %}>
+</div>
+
+
+<div class="mb-3">
+<label class="form-label">detalhe</label>
+<input type="text" class="form-control" placeholder="Informe detalhes e caracteríticas do item de cadastro" name="detalhe" {% if camiseta %}value="{{camiseta.detalhe}}" {% endif %}>
+</div>  
+
+<br>
+
+<button type="submit" class="btn btn-primary">
+{% if camiseta %}Salvar{% else %}Criar{% endif %}</button>
+
+</form>

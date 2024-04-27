@@ -9,25 +9,99 @@
   </head>
   <body>
 
+  <!-- Inicio da barra de navegação-->
+    <header nav class="navbar fixed-top navbar-light bg-light">
+      <div class="container">
+        </div>
+         <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">A t r a t i v a </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Calculadora</a>
+                  </li>              
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="tracandometas.html" target="_blank" rel="noopener noreferrer">Ajuda</a>
+                 </li>      
+                       
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Itens de Estoque
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-white">
+                      <li><a class="nav-link" href="lista_camiseta.html" target="_blank" rel="noopener noreferrer">Camisetas</a>
+                      <li><a class="nav-link" href="lista_camiseta.html" target="_blank" rel="noopener noreferrer">Camisas</a>
+                      <li><a class="nav-link" href="lista_camiseta.html" target="_blank" rel="noopener noreferrer">Calças</a>
+                      <li><a class="nav-link" href="lista_camiseta.html" target="_blank" rel="noopener noreferrer">Shorts</a>
+                      <li><a class="nav-link" href="lista_camiseta.html" target="_blank" rel="noopener noreferrer">Saias</a>
+                      <li><a class="nav-link" href="lista_camiseta.html" target="_blank" rel="noopener noreferrer">Vestidos</a>  
+                        
+                                                     
+                    </ul>
+                  </li>                                
+                  
+                </ul>             
+                
+                </form>
+              </div>
+            </div>
+          </nav>
+        </header>
+     <!-- Fim da Barra de Navegação -->
+
+     
+
     <div  class="container"> 
     <h1 class="text-center">Gestão de Estoque</h1> 
     <hr>
     <br>          
 
-        <h1 class="text-center">Camiseta</h1> 
-        <div id="form-camiseta" c-container="{{ url_for('camiseta.form_camiseta') }}"></div> 
-        <br>
-        <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>
-       
-        <br>
+    <h3 class="text-center">C a m i s e t a</h3> 
 
-        <h1 class="text-center">Camisa</h1>            
+       <!-- formulário de edição e criação do item, camiseta -->
+      <div id="form-camiseta" c-container="{{ url_for('camiseta.form_camiseta') }}"></div> 
+
+      <br>
+      <hr>
+
+       <!-- Listar Camisetas -->
+      <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>
+
+
+       <!-- Modal de visualização por item -->       
+       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar Item</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="exibir-camiseta"></div>            
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>              
+            </div>
+          </div>
+        </div>
+      </div>  
+             
+<!--
+      <div  class="container">             
+
+            <h1 class="text-center">Camisa</h1>            
+              
+            <div c-container="{{ url_for('camisa.form_camisa') }}"></div>
+            <br>
+            <div c-container="{{ url_for('camisa.lista_camisa') }}"></div>    -->      
        
-        <div c-container="{{ url_for('camisa.form_camisa') }}"></div>
-        <br>
-        <div c-container="{{ url_for('camisa.lista_camisa') }}"></div>
-   
-    </div>  
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="{{url_for('static', filename='js/cru.js') }}"></script> <!--  src para procurar os arquivos em javascript-->
