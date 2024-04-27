@@ -85,3 +85,6 @@ def deletar_camiseta(camiseta_id):
     global CAMISETA
     CAMISETA = [ c for c in CAMISETA if c ['id'] != camiseta_id ]
     return {'delete': 'ok'}
+
+
+

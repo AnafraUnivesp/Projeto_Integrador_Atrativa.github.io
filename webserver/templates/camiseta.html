@@ -59,13 +59,11 @@
      <!-- Fim da Barra de Navegação -->
 
      
-      <!-- Início Bloco Título-->   
+
     <div  class="container"> 
     <h1 class="text-center">Gestão de Estoque</h1> 
     <hr>
     <br>          
-    
-     <!-- Início Bloco Camiseta-->    
 
     <h3 class="text-center">C a m i s e t a</h3> 
 
@@ -94,40 +92,16 @@
           </div>
         </div>
       </div>  
+             
+<!--
+      <div  class="container">             
 
-    <br>
-    <br>
-    <br>
-    <hr>
-      
-    <!-- Início Bloco Camisa-->   
-
-    <div  class="container">    
-    <h3 class="text-center">C a m i s a</h3> 
-
-     <!-- formulário de edição e criação do item, camisa -->  
-    <div c-container="{{ url_for('camisa.form_camisa') }}"></div>
-    <br>
-
-     <!-- formulário de edição e criação do item, camiseta -->
-    <div c-container="{{ url_for('camisa.lista_camisa') }}"></div>     
-    
-    <!-- Modal de visualização por item -->       
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar Item</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" id="exibir-camisa"></div>            
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>              
-          </div>
-        </div>
-      </div>
-    </div>  
-                                  
+            <h1 class="text-center">Camisa</h1>            
+              
+            <div c-container="{{ url_for('camisa.form_camisa') }}"></div>
+            <br>
+            <div c-container="{{ url_for('camisa.lista_camisa') }}"></div>    -->      
+       
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="{{url_for('static', filename='js/cru.js') }}"></script> <!--  src para procurar os arquivos em javascript-->
