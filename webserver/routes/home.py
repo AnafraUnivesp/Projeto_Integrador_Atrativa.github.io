@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+from flask import Flask, redirect
 
 home_route = Blueprint('home',__name__)
 
