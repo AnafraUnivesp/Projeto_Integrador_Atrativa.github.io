@@ -1,12 +1,13 @@
 
 from flask import Flask
-from routes.home import home_route # importando a rota e a variável da homeroutes
-from routes.estoque import estoque_route # importando a rota estoque
+from configuration import configure_all
+
+
 
 app = Flask(__name__) 
 
-app.register_blueprint(home_route)
-app.register_blueprint(estoque_route, url_prefix='/estoque') # lembrar do prefixo /estoque/ 
+configure_all(app)
+
 
 app.run(debug=True) 
 

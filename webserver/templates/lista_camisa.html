@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">item</th>
+      <th scope="col">modelo</th>
+      <th scope="col">tipo</th>
+      <th scope="col">cor</th>
+      <th scope="col">tamanho</th>
+      <th scope="col">detalhe</th>
+      <th scope="col">ações</th>
+    </tr>
+  </thead>
+  <tbody id="lista-camisa">
+
+  {% for camisa in camisa %}
+
+      {% include 'item_camisa.html' %}
+
+  {% endfor %}
+
+  
+    
+  
+  </tbody>
+</table>
