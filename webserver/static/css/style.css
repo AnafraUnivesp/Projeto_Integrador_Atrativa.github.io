@@ -155,6 +155,61 @@ a:hover {
     color: #fff; 
 
  } 
+ 
+/* bloco menu responsivo*/
+ i.menu-mobile {
+    position: fixed;   
+    color: #fff; 
+    background-color: transparent ;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    cursor:pointer;
+    z-index: 10;
+    width: 45px; 
+    height:45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+ } 
+
+ .menu-nav-active{
+    overflow: hidden;
+ }
+
+ .menu-nav-active #header {
+    left: 0;
+ }
+
+ /* 1024 media de uma tela de tablet/celular*/
+ @media (max-width: 1024px) {
+
+    #header {
+       left:-300px;
+    }
+
+    i.menu-mobile{
+        display: flex;
+    }
+
+    section#inicio h2{
+        font-size: 3.5rem; 
+    }
+
+    section#inicio span#subtitle{
+        margin-right: 0;
+        font-size: 1rem;
+    }
+
+    #main{
+        margin-left: 0;
+
+    }
+}
+
+
+
 
 
 
