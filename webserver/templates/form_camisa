@@ -1,0 +1,63 @@
+<form class="c-form" 
+{% if camisa %}
+     action="{{ url_for('camisa.atualizar_camisa', camisa_id=camisa.id) }}"          
+{% else %}    
+     action="{{ url_for('camisa.inserir_camisa') }}" 
+{% endif %}
+
+method="{% if camisa %}PUT{% else %}POST{% endif %}"
+
+{% if camiseta %}
+    c-swap="#camisa-{{camisa.id}} "
+{% else %} 
+    c-appen="#lista-camisa"
+{% endif %}          
+
+c-reload-container="true" >
+
+
+<div class="mb-3">
+<label class="form-label">item</label>
+<input type="text" class="form-control" placeholder="camiseta" name="item" {% if camisa %}value="{{camisa.item}}"{% endif %}>
+</div>
+
+<div class="mb-3">
+<label class="form-label">tipo</label>
+<input type="text" class="form-control" placeholder=" feminino, masculino ou unissex"  name="tipo" {% if camisa %}value="{{camisa.tipo}}" {% endif %}>
+</div>
+
+<div class="mb-3">
+<label class="form-label">modelo</label>
+<input type="text" class="form-control" placeholder="manga curta, manga longa ,regata, t-shir ou baby look"  name="modelo" {% if camisa %}value="{{camisa.modelo}}" {% endif %}>
+</div>
+
+
+<div class="mb-3">
+<label class="form-label">marca</label>
+<input type="text" class="form-control" placeholder=" marca ou fornecedor"  name="marca" {% if camisa %}value="{{camisa.marca}}" {% endif %}>
+</div>
+
+
+<div class="mb-3">
+<label class="form-label">cor</label>
+<input type="text" class="form-control" placeholder="cor ou estampada"  name="cor" {% if camisa %}value="{{camisa.cor}}" {% endif %}>
+</div>
+
+
+<div class="mb-3">
+<label class="form-label">tamanho</label>
+<input type="text" class="form-control" placeholder="pp,p,m,g,gg,plus size"  name="tamanho" {% if camisa %}value="{{camisa.tamanho}}" {% endif %}>
+</div>
+
+
+<div class="mb-3">
+<label class="form-label">detalhe</label>
+<input type="text" class="form-control" placeholder="Informe detalhes e caracteríticas do item de cadastro" name="detalhe" {% if camisa %}value="{{camisa.detalhe}}" {% endif %}>
+</div>  
+
+<br>
+
+<button type="submit" class="btn btn-primary">
+{% if camisa %}Salvar{% else %}Criar{% endif %}</button>
+
+</form>
