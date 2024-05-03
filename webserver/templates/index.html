@@ -16,8 +16,6 @@
 <!-- Inicio Menu Responsivo-->  
     <i class="bi bi-list menu-mobile"></i>
 
-
-
 <!-- Inicio Bloco Aside-->  
     <aside id='header'>
         <section class="home">
@@ -44,7 +42,7 @@
                    </ul>                  
                   <li class="nav-item">
                   <a class="nav-link" href="https://www.twitch.tv/" target="_blank">
-                    <i class="bi bi-calculator" aria-hidden="true"></i> Calculadora </a>
+                    <i class="bi bi-calculator" aria-hidden="true"></i> Relatório </a>
                   </li> 
                   <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="https://www.twitch.tv/" target="_blank">
@@ -69,7 +67,7 @@
             <div class="col-md-5 d-flex justify-content-center align-items-center flex-column">      
                 <h2 class="text-white text-shadow"> Atrativa</h2>
                 <span id="subtitle" class="text-white 
-                  text-shadow">Gestão de Estoque</span>
+                  text-shadow">A arte em vestir bem</span>
             </div>
 
             <div class="col-md-7 d-flex justify-content-end align-items-end">
@@ -81,6 +79,68 @@
            
         
       </section>
+
+      <section class="container mt-5" id='sobre'>
+
+          <div class="row w-100">
+              <div class="col-md-12"></div>
+                   <h2 class='pt-3'>Controle de Estoque</h2> 
+                   <p>
+                  <br>
+                    A gestão de estoque é a forma mais prática de organizar seu inventário.
+                    Mantendo o mesmo disponível e acessível em tempo real, através de qualquer disponível móvel.
+                    Os itens digitalizados, contribuiem na agilidade e para que possa ser investido mais tempo na expansão do negócio.</p>
+          </div>
+         
+
+      </section>
+
+
+      <section class="container mt-5" id='sobre'>
+        <div class="row w-100">
+          <div class="col-md-12"></div>
+          <div  class="container">  
+         <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  C a m i s e t a s
+                </button>
+              </h5>
+            </div>
+        
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <!-- formulário de edição e criação do item, camisa -->  
+              <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
+              <br>
+          
+               <!-- formulário de edição e criação do item, camiseta -->
+              <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>     
+          
+              <!-- Modal de visualização por item -->       
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar Item</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="exibir-camiseta"></div>            
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>              
+                    </div>
+                  </div>
+                </div>
+              </div>  
+                 
+              </div>
+            </div>
+          </div>                             
+
+      </section>
+      
       
      
      
