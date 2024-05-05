@@ -27,22 +27,17 @@
           <div class="social-link mt-2 text-center" >
               <ul class="nav flex-column">
                   <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="https://www.twitch.tv/" target="_blank">
+                     <a class="nav-link active" aria-current="page" href="#sobre">
                       <i class=" bi bi-house" aria-hidden="true"></i> Home </a>
                   </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="https://www.twitch.tv/" target="_blank" role="button" aria-expanded="false">
-                       <i class=" bi bi-box seam" aria-hidden="true"></i> Itens de Estoque </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="https://www.twitch.tv/" target="_blank"><i class=" bi bi-check" aria-hidden="true"></i>Blusa</a></li>
-                      <li><a class="dropdown-item" href="https://www.twitch.tv/" target="_blank"><i class=" bi bi-check" aria-hidden="true"></i>Calça</a></li>
-                      <li><a class="dropdown-item" href="https://www.twitch.tv/" target="_blank"><i class=" bi bi-check" aria-hidden="true"></i>Camiseta</a></li>
-                      <li><a class="dropdown-item" href="https://www.twitch.tv/" target="_blank"><i class=" bi bi-check" aria-hidden="true"></i>Saia</a></li>
-                      <li><a class="dropdown-item" href="https://www.twitch.tv/" target="_blank"><i class=" bi bi-check" aria-hidden="true"></i>Short</a></li>
-                   </ul>                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="#listadeitens">
+                      <i class="bi bi-calculator" aria-hidden="true"></i> Itens de Estoque </a>
+                    </li> 
+                              
                   <li class="nav-item">
                   <a class="nav-link" href="https://www.twitch.tv/" target="_blank">
-                    <i class="bi bi-calculator" aria-hidden="true"></i> Relatório </a>
+                    <i class="bi bi-calculator" aria-hidden="true"></i> Contestoque </a>
                   </li> 
                   <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="https://www.twitch.tv/" target="_blank">
@@ -95,64 +90,221 @@
 
       </section>
 
+<!-- Inicio do Menu formato acordeon-->
+<section class="container mt-5" id='itensdeestoque'>
 
-      <section class="container mt-5" id='sobre'>
-        <div class="row w-100">
-          <div class="col-md-12"></div>
-          <div  class="container">  
-         <div class="accordion" id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  C a m i s e t a s
-                </button>
-              </h5>
-            </div>
-        
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                <!-- formulário de edição e criação do item, camisa -->  
-              <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
-              <br>
-          
-               <!-- formulário de edição e criação do item, camiseta -->
-              <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>     
-          
-              <!-- Modal de visualização por item -->       
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar Item</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="exibir-camiseta"></div>            
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>              
-                    </div>
-                  </div>
-                </div>
-              </div>  
-                 
-              </div>
-            </div>
-          </div>                             
+  <div class="row w-100">
+      <div class="col-md-12"></div>
+           <h2 class='pt-3'>Itens de Estoque</h2> 
+           <p><br>
+          Cadastre, consulte e edite itens de estoque por categoria em um único formulário.</p>
+       </div>
+  </section>
 
-      </section>
+    <section class="container mt-3" id='listadeitens'> 
+                    <div class="row w-100">
+                    <div class="col-md-12"></div>
+                    <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">                  
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    <p class="text-white font-weight-bold text-md-left">B l u s a </p> 
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <!-- formulário de edição e criação do item, camisa -->  
+                                    <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
+                                    <br>
+
+                                    <!-- formulário de edição e criação do item, camiseta -->
+                                    <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>   
+                                    
+                                    <!-- Modal de visualização por item -->       
+                                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar Item</h1>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" id="exibir-camiseta"></div>            
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>              
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+                                    </div>                                    
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <p class="text-white font-weight-bold text-md-left">C a l ç a </p> 
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <!-- formulário de edição e criação do item, camisa -->  
+                                    <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
+                                    <br>
+
+                                    <!-- formulário de edição e criação do item, camiseta -->
+                                    <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>   
+                                    
+                                    <!-- Modal de visualização por item -->       
+                                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar Item</h1>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" id="exibir-camiseta"></div>            
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>              
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <p class="text-white font-weight-bold text-md-left">C a m i s e t a</p> 
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <!-- formulário de edição e criação do item, camisa -->  
+                                    <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
+                                    <br>
+
+                                    <!-- formulário de edição e criação do item, camiseta -->
+                                    <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>   
+                                    
+                                    <!-- Modal de visualização por item -->       
+                                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar Item</h1>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" id="exibir-camiseta"></div>            
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>              
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div> 
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  <p class="text-white font-weight-bold text-md-left"> S a i a</p> 
+                              </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                  <!-- formulário de edição e criação do item, camisa -->  
+                                  <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
+                                  <br>
+
+                                  <!-- formulário de edição e criação do item, camiseta -->
+                                  <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>   
+                                  
+                                  <!-- Modal de visualização por item -->       
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar Item</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <div class="modal-body" id="exibir-camiseta"></div>            
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>              
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div> 
+
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <p class="text-white font-weight-bold text-md-left">S h o r t </p> 
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                               <!-- formulário de edição e criação do item, camisa -->  
+                               <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
+                               <br>
+
+                               <!-- formulário de edição e criação do item, camiseta -->
+                               <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>   
+                               
+                               <!-- Modal de visualização por item -->       
+                                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                   <div class="modal-dialog">
+                                     <div class="modal-content">
+                                       <div class="modal-header">
+                                         <h1 class="modal-title fs-5" id="exampleModalLabel">Visualizar Item</h1>
+                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                       </div>
+                                       <div class="modal-body" id="exibir-camiseta"></div>            
+                                       <div class="modal-footer">
+                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>              
+                                       </div>
+                                     </div>
+                                   </div>
+                                 </div> 
+
+                            </div>
+                        </div>
+                    </div> 
+                    </div>  
+
+
+                      
+</section>
       
-      
-     
-     
-     </main> 
+</main> 
 
 
-  
+
+  ... <!-- Conteúdo da página libras-->
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body> <!-- Fim do corpo da página -->
+
       
     <!-- Início Bloco de Amostras de Itens de estoque na tela-->   
 
-    
-     
     
      <!-- Fim do Bloco de Configuração do js -->
     <script src="{{url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>

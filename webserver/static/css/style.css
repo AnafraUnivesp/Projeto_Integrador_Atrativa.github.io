@@ -50,6 +50,17 @@ html,body
     color: 006400;	; /* cor do título Gestão de Estoque*/
 }
 
+ /* Título Gestão de Estoque */ 
+ #header h2{
+    font-size: 20px;
+    margin: 0;  
+    padding: 0;  
+    font-weight: 500; 
+    text-align: center;
+    color: 006400;	; /* cor do título Gestão de Estoque*/
+}
+
+
 #header a {
     font-size: 15px ;
     color: green;
@@ -206,7 +217,70 @@ a:hover {
         margin-left: 0;
 
     }
+ }    
+
+
+ /* barra de rolagem personalizada*/
+*::-webkit-scrollbar {
+    width: 10px;
 }
+
+*::-webkit-scrollbar-track { 
+    width:12px;
+    box-shadow: inset 0 0 .3rem #F5FFFA ;
+background-color: #fff  ;
+}
+
+*::-webkit-scrollbar-thumb { 
+    background-color: #124412 ;
+}
+
+
+.accordion {
+    background-color: white;
+    display: flex;
+    flex-direction:column;
+    padding: 3rem;
+    justify-content: center;
+    --bs-accordion-btn-bg: #124412;
+    --bs-accordion-active-bg: #124412;
+    --bs-accordion-btn-focus-box-shadow:#F5FFFA;
+
+}
+
+
+#container .accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 500px;
+}
+
+
+.accordion-header span{
+    max-width: 100%;
+    white-space:nowrap ;
+}
+
+.accordion-flush .accordion-button {
+    border-top: 1px solid white;
+  }
+  
+  .accordion-flush .accordion-item:last-child .accordion-button.collapsed,
+  .accordion-flush .accordion-item:last-child .accordion-body {
+    border-bottom: 1px solid white;
+  }
+
+
+  .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+    transition: all 0.5s;
+  }
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+  }
+
+
 
 
 
