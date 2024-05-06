@@ -11,20 +11,20 @@
     <td>
 
 
-    <button type="button" class="btn btn-secondary" 
+    <button type="button" class="btn btn-outline-secondary" 
            c-get="{{ url_for ('camisa.detalhe_camisa', camisa_id=camisa.id) }}"
            c-target="#exibir-camisa"
            data-bs-toggle="modal" data-bs-target="#exampleModal">
              Verificar
     </button>
 
-    <button class="btn btn-primary" 
+    <button class="btn btn-outline-primary" 
            c-get="{{url_for('camisa.form_edit_camisa', camisa_id=camisa.id)}}"
            c-target="#form-camisa">
          Editar
     </button>
 
-      <button class="btn btn-danger" 
+      <button class="btn btn-outline-danger" 
           c-delete="{{ url_for('camisa.deletar_camisa', camisa_id=camisa.id )}}"
           c-remove-closest="tr">
           Deletar
