@@ -82,8 +82,6 @@ def deletar_camiseta(camiseta_id):
 @camiseta_route.route('/<string:camiseta_item>', methods = ['GET'])
 def buscar_por_item(camiseta_item):
     camisetas = Camiseta.select().where(Camiseta.item==camiseta_item)
-    print('oi')
-    print(camisetas)
 
     return render_template('lista_camiseta.html', camiseta=camisetas)
 
