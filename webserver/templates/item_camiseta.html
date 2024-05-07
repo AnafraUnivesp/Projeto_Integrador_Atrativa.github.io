@@ -4,26 +4,27 @@
     <td>{{ camiseta.item }}</td>
     <td>{{ camiseta.modelo }}</td>
     <td>{{ camiseta.tipo }}</td>
+    <td>{{ camiseta.marca }}</td>
     <td>{{ camiseta.cor }}</td>
     <td>{{ camiseta.tamanho }}</td>
     <td>{{ camiseta.detalhe }}</td>
     <td>
 
 
-    <button type="button" class="btn btn-secondary" 
+    <button type="button" class="btn btn-outline-secondary" 
            c-get="{{ url_for ('camiseta.detalhe_camiseta', camiseta_id=camiseta.id) }}"
            c-target="#exibir-camiseta"
            data-bs-toggle="modal" data-bs-target="#exampleModal">
              Verificar
     </button>
 
-    <button class="btn btn-primary" 
+    <button class="btn btn-outline-primary" 
            c-get="{{url_for('camiseta.form_edit_camiseta', camiseta_id=camiseta.id)}}"
            c-target="#form-camiseta">
          Editar
     </button>
 
-      <button class="btn btn-danger" 
+      <button class="btn btn-outline-danger" 
           c-delete="{{ url_for('camiseta.deletar_camiseta', camiseta_id=camiseta.id )}}"
           c-remove-closest="tr">
           Deletar

@@ -10,4 +10,3 @@ configure_all(app)
 
 
 app.run(debug=True) 
-
