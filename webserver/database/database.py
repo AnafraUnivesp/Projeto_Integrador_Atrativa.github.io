@@ -1,4 +1,7 @@
-from peewee import  SqliteDatabase
+import os
+from peewee import PostgresqlDatabase
+from dotenv import load_dotenv
 
+load_dotenv()
 
-db = SqliteDatabase('estoque.db')
+db = PostgresqlDatabase(os.getenv('DATABASE_URI', ''))
