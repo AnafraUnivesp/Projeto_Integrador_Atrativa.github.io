@@ -18,7 +18,6 @@ def inserir_camisa():
         "item": data ['item'],
         "modelo": data ['modelo'],
         "tipo": data ['tipo'],
-        "marca": data ['marca'],
         "cor": data ['cor'],
         "tamanho": data ['tamanho'],
         "detalhe": data ['detalhe'],                
@@ -68,7 +67,6 @@ def atualizar_camisa(camisa_id):
             c['item'] = data['item']  
             c['modelo'] = data['modelo']  
             c['tipo'] = data['tipo']   
-            c['marca'] = data['marca'] 
             c['cor'] = data['cor']  
             c['tamanho'] = data['tamanho']  
             c['detalhe'] = data['detalhe']  
