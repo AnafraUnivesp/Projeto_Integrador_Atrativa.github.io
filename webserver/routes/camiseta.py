@@ -25,13 +25,12 @@ def inserir_camiseta():
         detalhe = data['detalhe'] 
     )
     
-    #CAMISETA.append(nova_camiseta)
     return render_template('item_camiseta.html', camiseta=nova_camiseta)
 
 
 @camiseta_route.route('/new')
 def form_camiseta():
-    """ Formulário para cadastra um item de estoque"""
+    """ Formulário para cadastrar um item de estoque"""
     return render_template('form_camiseta.html')
 
 
