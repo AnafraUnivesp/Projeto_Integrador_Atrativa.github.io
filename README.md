@@ -1,6 +1,6 @@
-# Projeto Integrador - Univesp 
+# Projeto Integrador - Univesp -
 
-Testando 
+Projeto desenvolvido para resolição de um problema real.
 
 ## 🚀 Começando
 
