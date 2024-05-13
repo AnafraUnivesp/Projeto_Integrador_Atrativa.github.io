@@ -1,109 +1,99 @@
-# website01..github.io
+# Projeto Integrador - Univesp 
 
-> Repositório desenvovldo sem template e com o a pasta docs como fonte de publicação e demais configurações do Jenkyll.
+Testando 
 
-<div id ="voltarFinal">
-	<a href="https://github.com/AnafraUnivesp/website01.github.io/tree/dev?tab=readme-ov-file#lembretes-e-observa%C3%A7%C3%B5es" id="descer">:arrow_down_small: Final página</a>
-</div>
+## 🚀 Começando
 
-<h1>Anotações</h1>
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-**Essas Anotações serão convertidas em documentações futuramente**
+Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
 
-* [Criando um repositório do zero:](https://docs.github.com/pt/repositories/creating-and-managing-repositories/creating-a-new-repository)
+### 📋 Pré-requisitos
 
-* [Criando um repositório + Website:](https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site)
- 
-* [Transformando um repo existente + Website:](https://docs.github.com/pt/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site)
+De que coisas você precisa para instalar o software e como instalá-lo?
 
-* [Utilizando um Tema Template do Jenkill:](https://docs.github.com/pt/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll)
+```
+Dar exemplos
+```
 
-* [Inserindo Https:](https://docs.github.com/pt/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https)
+### 🔧 Instalação
 
-* [Utilizando Jekyll Localmente:](https://docs.github.com/pt/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
+Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
 
-* [Instalando e Configurando a Jenkill:](https://jekyllrb.com/docs/installation/windows/)
+Diga como essa etapa será:
 
-* [Minha Webpage:](https://anafraunivesp.github.io/website01.github.io/)
+```
+Dar exemplos
+```
 
-* [Exemplo de webtemplate do Jenkill:](https://github.com/pages-themes/minimal/blob/master/_layouts/default.html)
+E repita:
 
-* [Alterando o título da página:](https://docs.github.com/pt/pages/quickstart#changing-the-title-and-description)
+```
+Até finalizar
+```
 
-* [Configurando Fonte de Publicicação (Ativando o Github Actions:)](https://docs.github.com/pt/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
 
-<br>
-<br>
+## ⚙️ Executando os testes
 
-<h2>Para rodar localmente</h2>
+Explicar como executar os testes automatizados para este sistema.
 
-* [Instalação do Jekill ( Verificar Sistema Operacional)](https://jekyllrb.com/docs/installation/windows/)
+### 🔩 Analise os testes de ponta a ponta
 
-* [Para Instalar o Jekill é necessário instalar o Ruby + Devkit (Ruby+Devkit 3.2.3-1 (x64)]( 
-https://rubyinstaller.org/downloads/) 
+Explique que eles verificam esses testes e porquê.
 
-* [Link de Ajuda para instalação do Blunder:]( https://www.youtube.com/watch?v=fJ6yJGM-M7Q&list=PLXh_vnJ0hr1BGoCzlQ73l60V7OO7ScU99&index=132&ab_channel=BuildAModule)
+```
+Dar exemplos
+```
 
+### ⌨️ E testes de estilo de codificação
 
-* [Exemplo de como inserir uma denpendência no blunder ( este exemplo está instalando uma dependência SASS)](https://youtu.be/I7EkaDiObvA?si=CZjLwpERRHOsqxQW)
+Explique que eles verificam esses testes e porquê.
 
-* [Instalando o Blunder: ( é necessário inserir a dependencia no arquivo Gemfile)](https://bundler.io/)
-[Link 2 - Workflow](https://bundler.io/guides/bundler_workflow.html)
+```
+Dar exemplos
+```
 
-* [Githu dicas ( instalar o gem github-pages) - Ler o Readme dos repositórios](https://gist.github.com/roachhd/87421e338941fe369c5e)
-[Gems do Ruby para github](https://github.com/github/pages-gem)
+## 📦 Implantação
 
-* [Dica youtube( ensinou instalar o gem github e verificar/Entender o Gemfile)](https://www.youtube.com/watch?v=z6dx_OUChRs&ab_channel=Nasc)
+Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
-* [Dica UTF8 + Jenkill:](https://en.wikipedia.org/wiki/Byte_order_mark#UTF-8)
+## 🛠️ Construído com
 
-* [Personalizando o tema HTML:](https://docs.github.com/pt/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#customizing-your-themes-html-layout)
+Mencione as ferramentas que você usou para criar seu projeto
 
-<br>
-<br>
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
+* [Maven](https://maven.apache.org/) - Gerente de Dependência
+* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
 
-<h2>Desenvolvendo o WebServer</h2>
+## 🖇️ Colaborando
 
-Em construção: 10.04.2024: [Readme WebServer:](https://github.com/AnafraUnivesp/website01.github.io/blob/main/webserver/Readme.md)
+Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
 
-<br>
-<br>
+## 📌 Versão
 
-<h2>Lembretes e observações</h2>
+Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
 
-Lembrando que precisar habilitar algumas especificações no GEMFILE para rodar localmente
+## ✒️ Autores
 
-Coloquei como root a pasta docs para não misturar com o banco de dados ... verificar o impacto disso futuramente
+Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
 
-* [Verificando Bugs:](https://github.com/jekyll/jekyll/issues/9312)
+* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
+* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
 
-Foi necessário rodar tanto no CMD do windows e algumas partes no gitbash
+Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
 
-O jenkill está sendo executado no gitbash
+## 📄 Licença
 
-Fiz algumas anotações e prints no meu whatsapp
+Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
 
-Não deu certo o utilizar o : **http://localhost:4000/** como indicado pelo github e a sim o que é gerado no jekyll.
+## 🎁 Expressões de gratidão
 
-<br>
-
-<!-- Div de Alinhamento de Imagem -->
-<div align="center">
-
-![Deu bom!!](./docs/pelecomemoracao.gif)
-
-</div>
-
-
+* Conte a outras pessoas sobre este projeto 📢;
+* Convide alguém da equipe para uma cerveja 🍺;
+* Um agradecimento publicamente 🫂;
+* etc.
 
 
-<div id ="voltarTopo">
-	<a href="https://github.com/AnafraUnivesp/website01.github.io/tree/dev?tab=readme-ov-file#website01githubio" id="subir">:arrow_up_small: Topo da página</a>
-</div>
-
-
-
-
-
-
-
+---
+⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
