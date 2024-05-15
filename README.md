@@ -8,7 +8,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 ### 📋 Pré-requisitos
 
-De que coisas você precisa para instalar o software e como instalá-lo?
+De que coisas você precisa para instalar o software e como instalá-lo:
 
 [Python](https://www.python.org/downloads/)
 [cru.js](https://github.com/Iazzetta/cru.js/blob/main/src/cru.js)
@@ -31,7 +31,7 @@ A aplicação irá rodar através do endereço http://localhost:5000/
 
 ## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
+Ferramentas utilizadas para a contrução do projeto:
 
 * [CSS](https://www.w3schools.com/css/)
 * [Bootstrap](https://getbootstrap.com/)
