@@ -1,1 +1,0 @@
-DATABASE_URI=postgresql://bxlbpazg:OIZVAXCpPT7Jk0xdH0lvoWYehx3C2k5T@silly.db.elephantsql.com/bxlbpazg
