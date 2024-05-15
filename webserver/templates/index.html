@@ -95,6 +95,7 @@
        </div>
   </section>
 
+  
   <!-- Inicio do Menu formato acordeon-->
     <section class="container mt-3" id='listadeitens'> 
                     <div class="row w-100">
@@ -109,12 +110,12 @@
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <!-- formulário de edição e criação do item, camisa -->  
+                                    <!-- formulário de edição e criação do item, blusa -->  
                                     <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
                                     <br>
 
-                                    <!-- formulário de edição e criação do item, camiseta -->
-                                    <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>   
+                                    <!-- formulário de edição e criação do item, blusa -->
+                                    <div c-container="{{ url_for('camiseta.lista_camiseta', item='blusa') }}"></div>   
                                     
                                     <!-- Modal de visualização por item -->       
                                       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -143,12 +144,13 @@
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <!-- formulário de edição e criação do item, camisa -->  
+                                    <!-- formulário de edição e criação do item, calça -->  
                                     <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
                                     <br>
 
-                                    <!-- formulário de edição e criação do item, camiseta -->
-                                    <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>   
+                                    <!-- formulário de edição e criação do item, calça -->
+                                    <div c-container="{{ url_for('camiseta.lista_camiseta', item='calca'
+                                    ) }}"></div>   
                                     
                                     <!-- Modal de visualização por item -->       
                                       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -177,12 +179,12 @@
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <!-- formulário de edição e criação do item, camisa -->  
+                                    <!-- formulário de edição e criação do item, camiseta -->  
                                     <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
                                     <br>
 
                                     <!-- formulário de edição e criação do item, camiseta -->
-                                    <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>   
+                                    <div c-container="{{ url_for('camiseta.lista_camiseta', item='camiseta') }}"></div>   
                                     
                                     <!-- Modal de visualização por item -->       
                                       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -212,12 +214,12 @@
                           </h2>
                           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
-                                  <!-- formulário de edição e criação do item, camisa -->  
+                                  <!-- formulário de edição e criação do item, saia -->  
                                   <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
                                   <br>
 
-                                  <!-- formulário de edição e criação do item, camiseta -->
-                                  <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>   
+                                  <!-- formulário de edição e criação do item, saia -->
+                                  <div c-container="{{ url_for('camiseta.lista_camiseta', item='saia') }}"></div>   
                                   
                                   <!-- Modal de visualização por item -->       
                                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -247,12 +249,12 @@
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                               <!-- formulário de edição e criação do item, camisa -->  
+                               <!-- formulário de edição e criação do item, short -->  
                                <div c-container="{{ url_for('camiseta.form_camiseta') }}"></div>
                                <br>
 
-                               <!-- formulário de edição e criação do item, camiseta -->
-                               <div c-container="{{ url_for('camiseta.lista_camiseta') }}"></div>   
+                               <!-- formulário de edição e criação do item, short -->
+                               <div c-container="{{ url_for('camiseta.lista_camiseta', item='short') }}"></div>   
                                
                                <!-- Modal de visualização por item -->       
                                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
