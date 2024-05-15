@@ -4,11 +4,19 @@ from database.models.camiseta import Camiseta
 
 camiseta_route = Blueprint('camiseta', __name__)
 
+<<<<<<< HEAD
 @camiseta_route.route('/')
 def lista_camiseta():
     """ Listar o estoque"""
     camiseta = Camiseta.select()
     return render_template('lista_camiseta.html', camiseta=camiseta)
+=======
+@camiseta_route.route('/<string:item>', methods = ['GET'])
+def lista_camiseta(item):
+    camisetas = Camiseta.select().where(Camiseta.item==item)
+
+    return render_template('lista_camiseta.html', camiseta=camisetas)
+>>>>>>> origin
 
 @camiseta_route.route('/', methods=['POST'])
 def inserir_camiseta():
@@ -25,13 +33,16 @@ def inserir_camiseta():
         detalhe = data['detalhe'] 
     )
     
+<<<<<<< HEAD
     #CAMISETA.append(nova_camiseta)
+=======
+>>>>>>> origin
     return render_template('item_camiseta.html', camiseta=nova_camiseta)
 
 
 @camiseta_route.route('/new')
 def form_camiseta():
-    """ Formulário para cadastra um item de estoque"""
+    """ Formulário para cadastrar um item de estoque"""
     return render_template('form_camiseta.html')
 
 
@@ -79,5 +90,10 @@ def deletar_camiseta(camiseta_id):
     camiseta.delete_instance()
     return {'delete': 'ok'}
 
+@camiseta_route.route('/<string:camiseta_item>', methods = ['GET'])
+def buscar_por_item(camiseta_item):
+    camisetas = Camiseta.select().where(Camiseta.item==camiseta_item)
+
+    return render_template('lista_camiseta.html', camiseta=camisetas)
 
 

@@ -13,4 +13,8 @@ class Camiseta(Model):
     data_registro = DateTimeField(default=datetime.datetime.now)
 
     class Meta:
+<<<<<<< HEAD
         database = db
+=======
+        database = db
+>>>>>>> origin
