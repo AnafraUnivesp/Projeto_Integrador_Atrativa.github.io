@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 # Projeto Integrador - Univesp -
 
 Projeto desenvolvido para resolição de um problema real.
+=======
+# Aplicação para Gerenciamento de Estoque: Organização, Controle e Planejamento
+
+O sistema de controle de estoque tem o potencial de trazer benefícios significativos para a loja de vestuário, proporcionando uma gestão mais eficiente e integrada do estoque. 
+>>>>>>> hom
 
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
+<<<<<<< HEAD
 Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
 
 ### 📋 Pré-requisitos
@@ -39,9 +46,33 @@ Termine com um exemplo de como obter dados do sistema ou como usá-los para uma 
 Explicar como executar os testes automatizados para este sistema.
 
 ### 🔩 Analise os testes de ponta a ponta
+=======
+### 📋 Pré-requisitos
+
+De que coisas você precisa para instalar o software e como instalá-lo:
+
+[Python](https://www.python.org/downloads/)
+[cru.js](https://github.com/Iazzetta/cru.js/blob/main/src/cru.js)
+[Flask](https://flask.palletsprojects.com/en/3.0.x/)
+[Peewee](https://docs.peewee-orm.com/en/latest/)
+[ElephantSql](https://www.elephantsql.com/)
+
+
+
+### ⌨️ Executando a aplicação
+
+Abra o terminal e digite o seguinte comando:
+
+```
+python webserver\main.py
+```
+
+A aplicação irá rodar através do endereço http://localhost:5000/
+>>>>>>> hom
 
 Explique que eles verificam esses testes e porquê.
 
+<<<<<<< HEAD
 ```
 Dar exemplos
 ```
@@ -93,7 +124,17 @@ Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](h
 * Convide alguém da equipe para uma cerveja 🍺;
 * Um agradecimento publicamente 🫂;
 * etc.
+=======
+## 🛠️ Construído com
+>>>>>>> hom
 
+Ferramentas utilizadas para a contrução do projeto:
 
+<<<<<<< HEAD
 ---
 ⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+=======
+* [CSS](https://www.w3schools.com/css/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Programador Python](https://www.youtube.com/playlist?list=PL39zbyHjgjrbsP3xFSc-YH-6FN8WNpglh) - Desenvolvimento Web com Flask e Python
+>>>>>>> hom
