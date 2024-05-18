@@ -20,8 +20,6 @@ python webserver\main.py
 
 A aplicação irá rodar através do endereço http://localhost:5000/
 
-Explique que eles verificam esses testes e porquê.
-
 ## 🛠️ Construído com
 
 Ferramentas utilizadas para a contrução do projeto:
