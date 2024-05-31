@@ -1,7 +1,7 @@
 
 ### 📋 Projeto Integrador - Youtube
 
-Link do projeto consolidado no [Youtube](https://www.python.org/downloads/)
+Link do projeto consolidado no [Youtube](https://www.youtube.com/watch?v=IpfXvJoG2T8)
 
 
 ### 📋 Pré-requisitos
